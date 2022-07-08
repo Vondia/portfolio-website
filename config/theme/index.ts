@@ -46,7 +46,7 @@ export const theme = {
     opacity: "#2B2F37",
     // System
     background: "#111317",
-    sidebar: "#1A1D23",
+    sidebar: "#ecf0f3",
     sidebarCollapsible: "#16181D",
     success: "#30BA67",
     danger: "#F2453D",

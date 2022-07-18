@@ -145,7 +145,7 @@ export const menu = parse(
 export const topOverlay = parse(
   {
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: "flex-end",
     width: "100%",
     alignItems: "center",
   },

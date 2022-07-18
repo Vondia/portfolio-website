@@ -10,7 +10,7 @@ type SkillsProps = {};
 
 export const Skills: FC<SkillsProps> = () => {
   return (
-    <div className={container}>
+    <div id="skills" className={container}>
       <div className={parent}>
         <Text variant="regular" color="purple" className={subTitle}>
           Skills

@@ -30,14 +30,6 @@ export const OverlaySidebarMenu: FC<OverlaySidebarMenuProps> = () => {
               <div>
                 <div className={styles.topOverlay}>
                   <div>
-                    <Image
-                      src="/../public/assets/pimLogo.png"
-                      alt=""
-                      width="60"
-                      height="60"
-                    />
-                  </div>
-                  <div>
                     <Dialog.Close asChild>
                       <button className={styles.closeButton}>
                         <AiOutlineClose />
@@ -58,7 +50,7 @@ export const OverlaySidebarMenu: FC<OverlaySidebarMenuProps> = () => {
                 <div className={styles.parentListItemOverlay}>
                   <ul>
                     <Link href="/">
-                      <a>
+                      <a onClick={() => setIsOpen(false)}>
                         <Text
                           variant="small"
                           className={styles.listItemOverlay}
@@ -67,8 +59,8 @@ export const OverlaySidebarMenu: FC<OverlaySidebarMenuProps> = () => {
                         </Text>
                       </a>
                     </Link>
-                    <Link href="/">
-                      <a>
+                    <Link href="/#about">
+                      <a onClick={() => setIsOpen(false)}>
                         <Text
                           variant="small"
                           className={styles.listItemOverlay}
@@ -77,8 +69,8 @@ export const OverlaySidebarMenu: FC<OverlaySidebarMenuProps> = () => {
                         </Text>
                       </a>
                     </Link>
-                    <Link href="/">
-                      <a>
+                    <Link href="/#skills">
+                      <a onClick={() => setIsOpen(false)}>
                         <Text
                           variant="small"
                           className={styles.listItemOverlay}
@@ -87,8 +79,8 @@ export const OverlaySidebarMenu: FC<OverlaySidebarMenuProps> = () => {
                         </Text>
                       </a>
                     </Link>
-                    <Link href="/">
-                      <a>
+                    <Link href="#projects">
+                      <a onClick={() => setIsOpen(false)}>
                         <Text
                           variant="small"
                           className={styles.listItemOverlay}
@@ -97,13 +89,13 @@ export const OverlaySidebarMenu: FC<OverlaySidebarMenuProps> = () => {
                         </Text>
                       </a>
                     </Link>
-                    <Link href="/">
-                      <a>
+                    <Link href="/#contact">
+                      <a onClick={() => setIsOpen(false)}>
                         <Text
                           variant="small"
                           className={styles.listItemOverlay}
                         >
-                          Content
+                          Contact
                         </Text>
                       </a>
                     </Link>

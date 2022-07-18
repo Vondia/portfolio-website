@@ -1,10 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { About } from "../components/About";
+import { Contact } from "../components/Contact";
 import { Main } from "../components/Main";
-import { Navbar } from "../components/navbar/NavBar";
+import { Projects } from "../components/projects";
 import { Skills } from "../components/skills";
-import { Heading } from "../components/ui/typograhpy/Heading";
 
 const Home: NextPage = () => {
   return (
@@ -12,14 +12,13 @@ const Home: NextPage = () => {
       <Head>
         <title>Pim | Front-End Developer</title>
       </Head>
-      <Navbar />
       <Main />
       <About />
       <Skills />
+      <Projects />
+      <Contact />
     </>
   );
 };
-
-// 1:05 minuten --> https://www.youtube.com/watch?v=CMx51wpd7g4&t=362s
 
 export default Home;

@@ -12,7 +12,7 @@ type MainProps = {};
 
 export const Main: FC<MainProps> = () => {
   return (
-    <div className={parent}>
+    <div id="home" className={parent}>
       <div className={container}>
         <div>
           <Text className={topText} variant="regular" color="shade600">

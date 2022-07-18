@@ -9,7 +9,7 @@ type AboutProps = {};
 
 export const About: FC<AboutProps> = () => {
   return (
-    <div className={container}>
+    <div id="about" className={container}>
       <div className={parent}>
         <div className={first}>
           <Text variant="large" color="purple" className={subTitle}>

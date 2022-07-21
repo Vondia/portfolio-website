@@ -1,64 +1,40 @@
 @font-face {
-  font-family: "Gillroy";
+  font-family: "Geomanist";
+  font-style: normal;
+  font-weight: 400;
+  font-display: optional;
+  src: url("/fonts/geomanist-regular-webfont.woff2") format("woff2"),
+    url("/fonts/geomanist-regular-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "Geomanist";
   font-style: normal;
   font-weight: 500;
-  font-display: swap;
-  src: url("/fonts/gillroy-medium.woff2") format("woff2"),
-    url("/fonts/gillroy-medium.woff") format("woff");
+  font-display: optional;
+  src: url("/fonts/geomanist-book-webfont.woff2") format("woff2"),
+    url("/fonts/geomanist-book-webfont.woff") format("woff");
 }
 @font-face {
-  font-family: "Gillroy";
-  font-style: italic;
-  font-weight: 500;
-  font-display: swap;
-  src: url("/fonts/gillroy-medium-italic.woff2") format("woff2"),
-    url("/fonts/gillroy-medium-italic.woff") format("woff");
-}
-@font-face {
-  font-family: "Gillroy";
+  font-family: "Geomanist";
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("/fonts/gillroy-semibold.woff2") format("woff2"),
-    url("/fonts/gillroy-semibold.woff") format("woff");
+  src: url("/fonts/geomanist-medium-webfont.woff2") format("woff2"),
+    url("/fonts/geomanist-medium-webfont.woff") format("woff");
 }
 @font-face {
-  font-family: "Gillroy";
+  font-family: "Geomanist";
   font-style: italic;
-  font-weight: 600;
+  font-weight: 500;
   font-display: swap;
-  src: url("/fonts/gillroy-semibold-italic.woff2") format("woff2"),
-    url("/fonts/gillroy-semibold-italic.woff") format("woff");
+  src: url("/fonts/geomanist-book-italic-webfont.woff2") format("woff2"),
+    url("/fonts/geomanist-book-italic-webfont.woff") format("woff");
 }
 @font-face {
-  font-family: "Gillroy";
+  font-family: "Geomanist";
   font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("/fonts/gillroy-bold.woff2") format("woff2"),
-    url("/fonts/gillroy-bold.woff") format("woff");
-}
-@font-face {
-  font-family: "Gillroy";
-  font-style: italic;
-  font-weight: 700;
-  font-display: swap;
-  src: url("/fonts/gillroy-bold-italic.woff2") format("woff2"),
-    url("/fonts/gillroy-bold-italic.woff") format("woff");
-}
-@font-face {
-  font-family: "Gillroy";
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url("/fonts/gillroy-extrabold.woff2") format("woff2"),
-    url("/fonts/gillroy-extrabold.woff") format("woff");
-}
-@font-face {
-  font-family: "Gillroy";
-  font-style: italic;
-  font-weight: 800;
-  font-display: swap;
-  src: url("/fonts/gillroy-extrabold-italic.woff2") format("woff2"),
-    url("/fonts/gillroy-extrabold-italic.woff") format("woff");
+  font-weight: 900;
+  font-display: optional;
+  src: url("/fonts/geomanist-black-webfont.woff2") format("woff2"),
+    url("/fonts/geomanist-black-webfont.woff") format("woff");
 }

@@ -37,6 +37,7 @@ export const theme = {
     shade800: "#11171C",
     // Text & borders
     white: "#FFFFFF",
+    darkText: "#1f2937",
     border: "#2B2E33",
     borderOpacity: "#2B2F37",
     borderDisabled: "#1E2229",
@@ -45,6 +46,8 @@ export const theme = {
     disabled: "#1E2229",
     opacity: "#2B2F37",
     // System
+    lightBlue: "#0beef9",
+    blue: "#48a9fe",
     background: "#111317",
     sidebar: "#ecf0f3",
     sidebarCollapsible: "#16181D",
@@ -53,8 +56,8 @@ export const theme = {
     inherit: "inherit",
   },
   gradients: {
-    default: "linear-gradient(94deg, #10C6FF 5.50%, #7636FF 97%)",
-    hover: "linear-gradient(91deg, #12C3FF -62%, #7636FF 104%)",
+    default: "linear-gradient(315deg, #0beef9 5.5%, #48a9fe 97%)",
+    hover: "linear-gradient(315deg, #0beef9 -62%, #48a9fe 104%)",
     fill: "linear-gradient(94deg, rgba(16, 198, 255, 0.05) 5.50%, rgba(118, 54, 255, 0.05) 97%);",
   },
   effects: {

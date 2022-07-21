@@ -5,7 +5,8 @@ import { css } from "linaria";
 import { parse, theme } from "../../config/theme";
 import { Text } from "../ui/typograhpy/Text";
 import { Heading } from "../ui/typograhpy/Heading";
-import { rem } from "polished";
+import { BsFillArrowRightCircleFill } from "react-icons/bs";
+import { useInView } from "react-intersection-observer";
 
 type ProjectItemProps = {
   title: string;
@@ -20,111 +21,117 @@ export const ProjectItem: FC<ProjectItemProps> = ({
   projectUrl,
   imageUrl,
 }) => {
+  const [viewRef, inView] = useInView({ triggerOnce: true });
   return (
-    <div className={projectItem} id="parent">
-      <Image
-        src={imageUrl}
-        alt="/"
-        width="800px"
-        height="800px"
-        className={image}
-      />
-      <div className={overlay}>
-        <div className={text}>
-          <Heading variant="h3" color="white">
-            {title}
-          </Heading>
-          <Text variant="regular" color="white" fontWeight="bold">
-            &quot;{subTitle}&quot;
-          </Text>
-          <Link href={projectUrl}>
-            <button className={link}>More info</button>
-          </Link>
-        </div>
+    <div className={parent} id={title} data-in-view={inView ? "" : null}>
+      <div className={image} ref={viewRef}>
+        <Image src={imageUrl} alt="/" width="400px" height="400px" />
       </div>
+      <div className={text}>
+        <Heading variant="h4" mb="8">
+          {title}
+        </Heading>
+      </div>
+      <div className={text}>
+        <Text variant="regular" color="shade400" mb="24">
+          &quot;{subTitle}&quot;
+        </Text>
+      </div>
+      <a
+        href={projectUrl}
+        target="_blank"
+        rel="noreferrer"
+        className={buttonDiv}
+      >
+        <button className={button}>
+          Press here to see the site{" "}
+          <BsFillArrowRightCircleFill style={{ marginLeft: "8px" }} />
+        </button>
+      </a>
     </div>
   );
 };
 
-const projectItem = parse(
-  {
-    position: "relative",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    p: "16",
-    width: "100%",
-  },
+const parent = parse(
+  { display: "flex", width: "100%", mx: "auto" },
   css`
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
-      0 8px 10px -6px rgb(0 0 0 / 0.1);
-    --tw-shadow-color: ${theme.colors.shade400};
-    border-radius: 0.75rem;
+    width: fit-content;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(3rem);
+    transition: all 1s cubic-bezier(0.08, 0.62, 0.25, 1);
+    overflow: visible;
+    max-width: 300px;
+    flex-direction: column;
+    border: 1px solid ${theme.colors.shade400};
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 11.1468px 18.2625px rgb(92 97 115 / 7%),
+      0 4px 4px rgb(112 118 128 / 7%);
 
-    @media screen and (hover: hover) and (pointer: fine) {
-      &:hover {
-        opacity: 1;
-      }
+    &[data-in-view] {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media screen and (min-width: ${theme.breakpoints.small}) {
+      max-width: 400px;
+      margin-x: unset;
     }
   `
 );
 
-const image = parse({
-  display: "block",
-  width: "100%",
-  height: "auto",
-});
+const image = parse({}, css``);
 
-const overlay = parse(
+const buttonDiv = parse(
   {
-    position: "absolute",
+    display: "flex",
+    alignItems: "center",
+    py: "16",
+    px: "20",
+    justifyContent: "center",
   },
   css`
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: 0.5s ease;
-    border-radius: 0.75rem;
-    background: ${theme.gradients.default};
+    background: ${theme.colors.blue};
+    margin-top: auto;
 
     @media screen and (hover: hover) and (pointer: fine) {
+      svg {
+        transition-property: transform;
+        transition-duration: 0.25s;
+      }
+
       &:hover {
         opacity: 0.9;
+        svg {
+          transform: translateX(0.25rem);
+        }
       }
     }
+
+    @media screen and (min-width: ${theme.breakpoints.medium}) {
+      padding-y: 1.5rem;
+      padding-x: 2rem;
+    }
+  `
+);
+
+const button = parse(
+  {
+    display: "flex",
+    alignItems: "center",
+    color: "white",
+  },
+  css`
+    font-weight: 600;
   `
 );
 
 const text = parse(
   {
-    position: "absolute",
+    textAlign: "center",
   },
-  css`
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-  `
-);
-
-const link = parse(
-  { p: "16", mt: "8" },
-  css`
-    background-color: ${theme.colors.white};
-    border-radius: 0.75rem;
-    height: fit-content;
-    font-size: ${rem(18)};
-    font-family: "Gillroy";
-    font-weight: 900;
-
-    @media screen and (min-width: ${theme.breakpoints.large}) {
-      font-size: ${rem(16)};
-    }
-  `
+  css``
 );

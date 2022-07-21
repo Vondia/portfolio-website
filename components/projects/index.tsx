@@ -5,32 +5,59 @@ import { Text } from "../ui/typograhpy/Text";
 import { Heading } from "../ui/typograhpy/Heading";
 import { ProjectItem } from "./ProjectItem";
 import { projectsInformation } from "../../lib/projects";
+import { Container } from "../ui/Container";
 
 type ProjectsProps = {};
 
 export const Projects: FC<ProjectsProps> = () => {
+  const leftColumn = projectsInformation.filter((_, key) => key % 2 === 0);
+  const rightColumn = projectsInformation.filter((_, key) => key % 2 !== 0);
   return (
-    <div id="projects" className={parent}>
+    <Container id="projects" className={parent}>
       <div className={container}>
-        <Text variant="large" color="purple" className={subTitle}>
+        <Text variant="large" color="blue" className={subTitle}>
           Projects
         </Text>
         <Heading variant="h3" className={title}>
           What I&apos;ve worked on
         </Heading>
         <div className={projects}>
-          {projectsInformation.map((item, index) => (
-            <ProjectItem
-              key={index}
-              title={item.title}
-              subTitle={item.subTitle}
-              imageUrl={item.imageUrl}
-              projectUrl={item.projectUrl}
-            />
-          ))}
+          <div className={left}>
+            {leftColumn.map((item, index) => (
+              <ProjectItem
+                key={index}
+                title={item.title}
+                subTitle={item.subTitle}
+                imageUrl={item.imageUrl}
+                projectUrl={item.projectUrl}
+              />
+            ))}
+          </div>
+          <div className={right}>
+            {rightColumn.map((item, index) => (
+              <ProjectItem
+                key={index}
+                title={item.title}
+                subTitle={item.subTitle}
+                imageUrl={item.imageUrl}
+                projectUrl={item.projectUrl}
+              />
+            ))}
+          </div>
+          <div className={showOnMobile}>
+            {projectsInformation.map((item, index) => (
+              <ProjectItem
+                key={index}
+                title={item.title}
+                subTitle={item.subTitle}
+                imageUrl={item.imageUrl}
+                projectUrl={item.projectUrl}
+              />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 
@@ -38,7 +65,13 @@ const parent = parse(
   {
     width: "100%",
   },
-  css``
+  css`
+    position: relative;
+
+    @media screen and (min-width: ${theme.breakpoints.xlarge}) {
+      max-width: 89rem;
+    }
+  `
 );
 
 const container = parse(
@@ -55,25 +88,79 @@ const container = parse(
 const subTitle = parse(
   {
     py: "16",
+    textAlign: "center",
   },
   css`
     text-transform: uppercase;
     letter-spacing: 0.1em;
+
+    @media screen and (min-width: ${theme.breakpoints.large}) {
+      text-align: left;
+    }
   `
 );
 
-const title = parse({
-  py: "16",
-});
+const title = parse(
+  {
+    py: "16",
+    textAlign: "center",
+  },
+  css`
+    @media screen and (min-width: ${theme.breakpoints.large}) {
+      text-align: left;
+    }
+  `
+);
 
 const projects = parse(
   {
     display: "grid",
   },
   css`
+    opacity: 1;
+    grid-template-columns: 1fr;
+    grid-column-gap: 3rem;
+
+    @media screen and (min-width: ${theme.breakpoints.small}) {
+      grid-column-gap: 2rem;
+    }
+
     @media screen and (min-width: ${theme.breakpoints.medium}) {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      grid-gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 5rem;
+    }
+
+    @media screen and (min-width: ${theme.breakpoints.large}) {
+      grid-column-gap: 10rem;
+    }
+  `
+);
+
+const showOnMobile = css`
+  @media screen and (min-width: ${theme.breakpoints.medium}) {
+    display: none;
+  }
+`;
+
+const left = parse(
+  {
+    display: "none",
+  },
+  css`
+    @media screen and (min-width: ${theme.breakpoints.medium}) {
+      display: block;
+    }
+  `
+);
+
+const right = parse(
+  {
+    display: "none",
+    py: "48",
+  },
+  css`
+    @media screen and (min-width: ${theme.breakpoints.medium}) {
+      display: block;
     }
   `
 );

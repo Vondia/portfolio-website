@@ -159,9 +159,7 @@ export const closeButton = parse(
   },
   css`
     border-radius: 9999px;
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-      0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --tw-shadow-color: ${theme.colors.shade400};
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   `
 );
 
@@ -171,9 +169,7 @@ export const socialMediaButton = parse(
   },
   css`
     border-radius: 9999px;
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-      0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --tw-shadow-color: ${theme.colors.shade400};
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     transition: all 0.2s ease-in;
 
     @media screen and (hover: hover) and (pointer: fine) {
@@ -239,5 +235,5 @@ export const footerOverlay = css`
   padding-top: 10rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: ${theme.colors.purple};
+  color: ${theme.colors.blue};
 `;

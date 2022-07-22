@@ -45,57 +45,81 @@ export const Navbar: FC<NavbarProps> = ({ animationVariant }) => {
     window.addEventListener("scroll", handleShadow);
   }, []);
 
+  //   const [clientWindowHeight, setClientWindowHeight] = useState("");
+  //   const handleScroll = () => {
+  //     setClientWindowHeight(window.scrollY);
+  //   };
+
+  //   useEffect(() => {
+  //     window.addEventListener("scroll", handleScroll);
+  //     return () => window.removeEventListener("scroll", handleScroll);
+  //   });
+
+  const currentRoute = router.asPath;
+  console.log(currentRoute);
   return (
     <nav
       className={navBg === "transparent" ? parentProject : parent}
       data-animation-variant={animationVariant}
     >
       <div className={shadow ? container : containerShadowless}>
-        {/* <Link href="/">
-          <Image
-            src="/../public/assets/pimLogo.png"
-            alt="/"
-            width="80"
-            height="80"
-          />
-        </Link> */}
         <div>
           <ul style={{ color: `${linkColor}` }} className={hideOnMobile}>
             <Link href="/">
               <a>
-                <Text variant="small" className={listItem}>
+                <Text
+                  variant="small"
+                  className={listItem}
+                  data-active={currentRoute === "/"}
+                >
                   {" "}
                   Home
                 </Text>
               </a>
             </Link>
-            <Link href="/#about">
-              <a>
-                <Text variant="small" className={listItem}>
-                  {" "}
-                  About
-                </Text>
-              </a>
-            </Link>
-            <Link href="/#skills">
-              <a>
-                <Text variant="small" className={listItem}>
-                  {" "}
-                  Skills
-                </Text>
-              </a>
-            </Link>
             <Link href="/#projects">
               <a>
-                <Text variant="small" className={listItem}>
+                <Text
+                  variant="small"
+                  className={listItem}
+                  data-active={currentRoute === "/#projects"}
+                >
                   {" "}
                   Projects
                 </Text>
               </a>
             </Link>
+            <Link href="/#skills">
+              <a>
+                <Text
+                  variant="small"
+                  className={listItem}
+                  data-active={currentRoute === "/#skills"}
+                >
+                  {" "}
+                  Skills
+                </Text>
+              </a>
+            </Link>
+            <Link href="/#about" data-active={currentRoute === "/#about"}>
+              <a>
+                <Text
+                  variant="small"
+                  className={listItem}
+                  data-active={currentRoute === "/#about"}
+                >
+                  {" "}
+                  About
+                </Text>
+              </a>
+            </Link>
             <Link href="/#contact">
               <a>
-                <Text variant="small" className={listItem}>
+                <Text
+                  variant="small"
+                  className={listItem}
+                  data-active={currentRoute === "/#contact"}
+                >
                   {" "}
                   Contact
                 </Text>
@@ -122,9 +146,7 @@ const container = parse(
     left: 0;
     padding-right: 1rem;
     transition: box-shadow 0.3s ease-in-out;
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
-      0 8px 10px -6px rgb(0 0 0 / 0.1);
-    transform-style: preserve-3d;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
     @media screen and (min-width: ${theme.breakpoints.large}) {
       justify-content: space-between;
@@ -144,6 +166,7 @@ const containerShadowless = parse(
     top: 0;
     left: 0;
     padding-right: 1rem;
+    transition: box-shadow 0.3s ease-in-out;
 
     @media screen and (min-width: ${theme.breakpoints.large}) {
       justify-content: space-between;
@@ -222,6 +245,10 @@ const listItem = parse(
       &:hover {
         border-bottom: 1px solid ${theme.colors.shade400};
       }
+    }
+    &[data-active="true"] {
+      color: ${theme.colors.blue};
+      font-weight: 600;
     }
   `
 );

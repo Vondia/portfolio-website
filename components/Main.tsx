@@ -5,8 +5,6 @@ import { rem } from "polished";
 import { Text } from "./ui/typograhpy/Text";
 import { Heading } from "./ui/typograhpy/Heading";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { AiOutlineMail } from "react-icons/ai";
-import { BsFillPersonLinesFill } from "react-icons/bs";
 
 type MainProps = {};
 
@@ -20,10 +18,14 @@ export const Main: FC<MainProps> = () => {
           </Text>
           <Heading variant="h1" color="shade700" className={headingText}>
             Hi, I&apos;m{" "}
-            <Heading variant="h1" as="span" color="purple">
-              {" "}
-              Pim{" "}
-            </Heading>
+            <div className={pimText}>
+              <Heading variant="h1" as="h2" color="blue">
+                Pim
+              </Heading>
+              <Heading variant="h1" as="h2" color="blue">
+                Pim
+              </Heading>
+            </div>
           </Heading>
           <Heading
             variant="h1"
@@ -38,18 +40,25 @@ export const Main: FC<MainProps> = () => {
             front-end web applications while continueing to improve my skills.
           </Text>
           <div className={buttonContainer}>
-            <div className={button}>
-              <FaLinkedinIn />
-            </div>
-            <div className={button}>
-              <FaGithub />
-            </div>
-            <div className={button}>
-              <AiOutlineMail />
-            </div>
-            <div className={button}>
-              <BsFillPersonLinesFill />
-            </div>
+            <a
+              href="https://www.linkedin.com/in/pim-van-den-bosch/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <button className={button}>
+                <FaLinkedinIn />
+              </button>
+            </a>
+
+            <a
+              href="https://github.com/vondia"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <button className={button}>
+                <FaGithub />
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -62,7 +71,7 @@ const parent = parse(
     width: "100%",
   },
   css`
-    height: 100vh;
+    height: 80vh;
     text-align: center;
   `
 );
@@ -104,8 +113,67 @@ const topText = css`
 const headingText = parse(
   {
     py: "16",
+    display: "flex",
+    justifyContent: "center",
   },
-  css``
+  css`
+    padding-right: 6rem;
+    @media screen and (min-width: ${theme.breakpoints.large}) {
+      padding-right: 7rem;
+    }
+  `
+);
+
+const pimText = parse(
+  { position: "relative" },
+  css`
+    padding-left: 14px;
+    h2 {
+      color: #fff;
+      font-size: 8em;
+      position: absolute;
+    }
+    h2:nth-child(1) {
+      color: transparent;
+      -webkit-text-stroke: 2px #03a9f4;
+    }
+
+    h2:nth-child(2) {
+      color: #03a9f4;
+      animation: animate 4s ease-in-out infinite;
+    }
+
+    @keyframes animate {
+      0%,
+      100% {
+        clip-path: polygon(
+          0% 45%,
+          16% 44%,
+          33% 50%,
+          54% 60%,
+          70% 61%,
+          84% 59%,
+          100% 52%,
+          100% 100%,
+          0% 100%
+        );
+      }
+
+      50% {
+        clip-path: polygon(
+          0% 60%,
+          15% 65%,
+          34% 66%,
+          51% 62%,
+          67% 50%,
+          84% 45%,
+          100% 46%,
+          100% 100%,
+          0% 100%
+        );
+      }
+    }
+  `
 );
 
 const headingTextsecondLine = parse(
@@ -133,7 +201,7 @@ const buttonContainer = parse(
   {
     display: "flex",
     alignItems: "center",
-    justifyContent: "space-between",
+    justifyContent: "space-around",
     m: "auto",
     py: "16",
   },
@@ -145,13 +213,12 @@ const buttonContainer = parse(
 const button = parse(
   {
     p: "24",
-    color: "purple",
+    color: "blue",
+    display: "flex",
   },
   css`
     border-radius: 9999px;
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-      0 4px 6px -4px rgb(0 0 0 / 0.1);
-    --tw-shadow-color: ${theme.colors.shade400};
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     transition: all 0.2s ease-in;
 
     @media screen and (hover: hover) and (pointer: fine) {

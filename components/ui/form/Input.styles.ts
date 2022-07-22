@@ -82,12 +82,12 @@ export const baseInput = parse(
   },
   css`
     border: 1px solid ${theme.colors.shade300};
-    color: ${theme.colors.white};
+    color: ${theme.colors.darkText};
     background-color: transparent;
     transition-property: border;
     transition-duration: 0.25s;
     border-radius: 6px;
-    font-weight: ${theme.fontWeights.medium};
+    font-weight: ${theme.fontWeights.normal};
     font-size: ${rem(16)};
     -webkit-appearance: none;
 

@@ -11,20 +11,17 @@ export const About: FC<AboutProps> = () => {
   return (
     <div id="about" className={container}>
       <div className={parent}>
-        <div className={first}>
-          <Text variant="large" color="purple" className={subTitle}>
-            About
-          </Text>
+        <div>
           <Heading variant="h3" className={title}>
             Who I Am
           </Heading>
-          <Text variant="regular" color="shade600" className={paragraphs}>
+          <Text variant="large" color="shade600" className={paragraphs}>
             So I quit my job in the midst of a Pandemic to start an intense
             full-time boot camp to become a developer... crazy right?
             Here&apos;s my story:
           </Text>
           <br />
-          <Text variant="regular" color="shade600" className={paragraphs}>
+          <Text variant="large" color="shade600" className={paragraphs}>
             After having worked in the broadcasting industry for the better part
             of a decade (8 years). I had to do a new morning show, and while
             doing it I noticed I was excited learning something new again. And
@@ -44,7 +41,7 @@ export const About: FC<AboutProps> = () => {
             (3 months) to jumpstart my new career.
           </Text>
           <br />
-          <Text variant="regular" color="shade600" className={paragraphs}>
+          <Text variant="large" color="shade600" className={paragraphs}>
             Over the course of 3 months I learned a lot about all sorts of
             marvelous technologies (from React and Redux to Express and
             PostgreSQL and much more). After graduating I had talks with a lot
@@ -67,10 +64,6 @@ export const About: FC<AboutProps> = () => {
             can&apos;t wait to share some of the cool stuff I worked on with
             you.
           </Text>
-          <br />
-          <Text variant="regular" color="shade600" className={paragraphs}>
-            Check out some of my latest projects here.
-          </Text>
         </div>
         <div className={image}>
           <Image
@@ -90,15 +83,11 @@ const container = parse(
   {
     display: "flex",
     alignItems: "center",
-    py: "64",
+    my: "64",
     width: "100%",
-    p: "8",
+    px: "8",
   },
-  css`
-    @media screen and (min-width: ${theme.breakpoints.medium}) {
-      height: 100vh;
-    }
-  `
+  css``
 );
 
 const parent = parse(
@@ -108,27 +97,11 @@ const parent = parse(
   css`
     max-width: 1240px;
 
-    @media screen and (min-width: ${theme.breakpoints.medium}) {
+    @media screen and (min-width: ${theme.breakpoints.large}) {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: 1fr 1fr;
       grid-gap: 2rem;
     }
-  `
-);
-
-const first = css`
-  @media screen and (min-width: ${theme.breakpoints.medium}) {
-    grid-column: span 2 / span 2;
-  }
-`;
-
-const subTitle = parse(
-  {
-    py: "16",
-  },
-  css`
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
   `
 );
 
@@ -145,18 +118,14 @@ const image = parse(
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    width: "100%",
-    height: "auto",
     m: "auto",
     p: "24",
   },
   css`
-    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
-      0 8px 10px -6px rgb(0 0 0 / 0.1);
-    --tw-shadow-color: ${theme.colors.shade400};
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     border-radius: 0.75rem;
     transition: all 0.2s ease-in;
-    border-radius: 4px;
+    border-radius: 0.75rem;
 
     @media screen and (hover: hover) and (pointer: fine) {
       &:hover {

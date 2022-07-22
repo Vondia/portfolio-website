@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { css } from "linaria";
 import { parse, theme } from "../../config/theme";
 import { Text } from "../ui/typograhpy/Text";
@@ -6,18 +6,26 @@ import { Heading } from "../ui/typograhpy/Heading";
 import { ProjectItem } from "./ProjectItem";
 import { projectsInformation } from "../../lib/projects";
 import { Container } from "../ui/Container";
+import { useRouter } from "next/router";
+import { AnimationVariant } from "../../pages/_app";
 
 type ProjectsProps = {};
 
 export const Projects: FC<ProjectsProps> = () => {
+  const { isReady } = useRouter();
+  const [animationVariant, setAnimationVariant] =
+    useState<AnimationVariant>("animate");
+
+  useEffect(() => {
+    // Disabled for testing 👇
+    // setAnimationVariant("visible")
+    setAnimationVariant("animate");
+  }, [isReady]);
   const leftColumn = projectsInformation.filter((_, key) => key % 2 === 0);
   const rightColumn = projectsInformation.filter((_, key) => key % 2 !== 0);
   return (
     <Container id="projects" className={parent}>
       <div className={container}>
-        <Text variant="large" color="blue" className={subTitle}>
-          Projects
-        </Text>
         <Heading variant="h3" className={title}>
           What I&apos;ve worked on
         </Heading>
@@ -30,6 +38,7 @@ export const Projects: FC<ProjectsProps> = () => {
                 subTitle={item.subTitle}
                 imageUrl={item.imageUrl}
                 projectUrl={item.projectUrl}
+                animation={animationVariant}
               />
             ))}
           </div>
@@ -41,6 +50,7 @@ export const Projects: FC<ProjectsProps> = () => {
                 subTitle={item.subTitle}
                 imageUrl={item.imageUrl}
                 projectUrl={item.projectUrl}
+                animation={animationVariant}
               />
             ))}
           </div>
@@ -52,6 +62,7 @@ export const Projects: FC<ProjectsProps> = () => {
                 subTitle={item.subTitle}
                 imageUrl={item.imageUrl}
                 projectUrl={item.projectUrl}
+                animation={animationVariant}
               />
             ))}
           </div>

@@ -7,12 +7,14 @@ import { Text } from "../ui/typograhpy/Text";
 import { Heading } from "../ui/typograhpy/Heading";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { useInView } from "react-intersection-observer";
+import { AnimationVariant } from "../../pages/_app";
 
 type ProjectItemProps = {
   title: string;
   subTitle: string;
   projectUrl: string;
   imageUrl: string;
+  animation: AnimationVariant;
 };
 
 export const ProjectItem: FC<ProjectItemProps> = ({
@@ -20,10 +22,16 @@ export const ProjectItem: FC<ProjectItemProps> = ({
   subTitle,
   projectUrl,
   imageUrl,
+  animation,
 }) => {
   const [viewRef, inView] = useInView({ triggerOnce: true });
   return (
-    <div className={parent} id={title} data-in-view={inView ? "" : null}>
+    <div
+      className={parent}
+      id={title}
+      data-in-view={inView ? "" : null}
+      data-animation-variant={animation}
+    >
       <div className={image} ref={viewRef}>
         <Image src={imageUrl} alt="/" width="400px" height="400px" />
       </div>
@@ -37,17 +45,14 @@ export const ProjectItem: FC<ProjectItemProps> = ({
           &quot;{subTitle}&quot;
         </Text>
       </div>
-      <a
-        href={projectUrl}
-        target="_blank"
-        rel="noreferrer"
-        className={buttonDiv}
-      >
-        <button className={button}>
-          Press here to see the site{" "}
-          <BsFillArrowRightCircleFill style={{ marginLeft: "8px" }} />
-        </button>
-      </a>
+      <Link href={projectUrl}>
+        <div className={buttonDiv}>
+          <button className={button}>
+            More information on this project
+            <BsFillArrowRightCircleFill style={{ marginLeft: "8px" }} />
+          </button>
+        </div>
+      </Link>
     </div>
   );
 };
@@ -68,12 +73,31 @@ const parent = parse(
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 11.1468px 18.2625px rgb(92 97 115 / 7%),
-      0 4px 4px rgb(112 118 128 / 7%);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
-    &[data-in-view] {
-      opacity: 1;
-      transform: translateY(0);
+    &[data-animation-variant="animate"]&&[data-in-view] {
+      display: inline-block;
+      animation-name: fadeIn;
+      animation-fill-mode: forwards;
+      animation-duration: 0.5s;
+      &:nth-child(1) {
+        animation-delay: 1.3s;
+      }
+      &:nth-child(2) {
+        animation-delay: 0s;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(3rem);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
     }
 
     @media screen and (min-width: ${theme.breakpoints.small}) {
@@ -96,6 +120,7 @@ const buttonDiv = parse(
   css`
     background: ${theme.colors.blue};
     margin-top: auto;
+    cursor: pointer;
 
     @media screen and (hover: hover) and (pointer: fine) {
       svg {

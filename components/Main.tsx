@@ -5,12 +5,13 @@ import { rem } from "polished";
 import { Text } from "./ui/typograhpy/Text";
 import { Heading } from "./ui/typograhpy/Heading";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { Container } from "./ui/Container";
 
 type MainProps = {};
 
 export const Main: FC<MainProps> = () => {
   return (
-    <div id="home" className={parent}>
+    <Container id="home" className={parent}>
       <div className={container}>
         <div>
           <Text className={topText} variant="regular" color="shade600">
@@ -62,7 +63,7 @@ export const Main: FC<MainProps> = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 
@@ -71,7 +72,7 @@ const parent = parse(
     width: "100%",
   },
   css`
-    height: 80vh;
+    height: 65vh;
     text-align: center;
   `
 );
@@ -87,20 +88,10 @@ const container = parse(
     p: "8",
   },
   css`
-    width: calc(100% - 2rem);
-    max-width: ${rem(540)};
+    margin-top: 6rem;
 
-    @media screen and (min-width: ${theme.breakpoints.small}) {
-      width: calc(100% - 3rem);
-      max-width: ${rem(720)};
-    }
-
-    @media screen and (min-width: ${theme.breakpoints.medium}) {
-      max-width: ${rem(980)};
-    }
-
-    @media screen and (min-width: ${theme.breakpoints.large}) {
-      max-width: ${rem(1400)};
+    @media (max-width: ${theme.breakpoints.medium}) {
+        margin-top unset;
     }
   `
 );
@@ -192,7 +183,7 @@ const bottomText = parse(
     max-width: 75%;
 
     @media screen and (min-width: ${theme.breakpoints.medium}) {
-      max-width: 50%;
+      max-width: 60%;
     }
   `
 );

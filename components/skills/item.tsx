@@ -49,11 +49,6 @@ const items = parse(
     overflow: hidden;
     opacity: 0;
 
-    @media screen and (hover: hover) and (pointer: fine) {
-      &:hover {
-        transform: scale(1.05);
-      }
-    }
     &[data-in-view] {
       display: inline-block;
       filter: blur(4px);

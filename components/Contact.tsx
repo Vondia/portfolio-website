@@ -27,8 +27,6 @@ export const Contact: FC<ContactProps> = () => {
     setSubject(subject);
     setMessage(message);
   };
-  console.log(handleSubmit);
-  console.log(name);
   return (
     <div id="contact" className={styles.parent}>
       <div className={styles.container}>

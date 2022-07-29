@@ -166,6 +166,7 @@ export const closeButton = parse(
 export const socialMediaButton = parse(
   {
     p: "12",
+    mr: "48",
   },
   css`
     border-radius: 9999px;
@@ -183,8 +184,7 @@ export const socialMediaButton = parse(
 export const socialMediaButtons = parse(
   {
     display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
+    alignItems: "flex-start",
     my: "16",
   },
   css`

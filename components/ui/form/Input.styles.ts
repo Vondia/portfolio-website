@@ -100,7 +100,7 @@ export const baseInput = parse(
     }
 
     &:not(:disabled):hover {
-      border-color: ${theme.colors.shade500};
+      border-color: ${theme.colors.shade300};
     }
 
     &[data-status="error"] {
@@ -109,12 +109,12 @@ export const baseInput = parse(
 
     &:focus-visible {
       outline: 0;
-      box-shadow: 0 0 0 1px ${rgba(theme.colors.shade500, 0.5)};
+      box-shadow: 0 0 0 1px ${rgba(theme.colors.shade300, 0.5)};
     }
 
     &:focus {
-      border: 1px solid ${theme.colors.shade400};
-      box-shadow: 0 0 0 2px ${theme.colors.shade600};
+      border: 1px solid ${theme.colors.shade200};
+      box-shadow: 0 0 0 1px ${theme.colors.shade300};
     }
 
     &:disabled {

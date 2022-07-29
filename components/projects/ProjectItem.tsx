@@ -5,7 +5,7 @@ import { css } from "linaria";
 import { parse, theme } from "../../config/theme";
 import { Text } from "../ui/typograhpy/Text";
 import { Heading } from "../ui/typograhpy/Heading";
-import { BsFillArrowRightCircleFill } from "react-icons/bs";
+import { IoIosArrowForward } from "react-icons/Io";
 import { useInView } from "react-intersection-observer";
 import { AnimationVariant } from "../../pages/_app";
 
@@ -49,7 +49,7 @@ export const ProjectItem: FC<ProjectItemProps> = ({
         <div className={buttonDiv}>
           <button className={button}>
             More information on this project
-            <BsFillArrowRightCircleFill style={{ marginLeft: "8px" }} />
+            <IoIosArrowForward style={{ marginLeft: "8px" }} />
           </button>
         </div>
       </Link>
@@ -68,12 +68,11 @@ const parent = parse(
     overflow: visible;
     max-width: 300px;
     flex-direction: column;
-    border: 1px solid ${theme.colors.shade400};
-    border-bottom-right-radius: 15px;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
+    border: 1px solid ${theme.colors.borderShadow};
+    border-radius: 1rem;
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    background-color: ${theme.colors.white};
 
     &[data-animation-variant="animate"]&&[data-in-view] {
       display: inline-block;

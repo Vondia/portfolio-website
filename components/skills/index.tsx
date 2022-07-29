@@ -5,11 +5,16 @@ import { parse, theme } from "../../config/theme";
 import { itemInfo } from "../../lib/itemInfo";
 import { SkillsItem } from "./item";
 import { useInView } from "react-intersection-observer";
+import { Container } from "../ui/Container";
 
 export const Skills: FC = () => {
   const [viewRef, inView] = useInView({ triggerOnce: true });
   return (
-    <div id="skills" className={container} data-in-view={inView ? "" : null}>
+    <Container
+      id="skills"
+      className={container}
+      data-in-view={inView ? "" : null}
+    >
       <div className={parent} ref={viewRef}>
         <Heading
           variant="h2"
@@ -40,7 +45,7 @@ export const Skills: FC = () => {
           ))}
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

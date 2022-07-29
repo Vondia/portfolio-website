@@ -126,11 +126,11 @@ const pimText = parse(
     }
     h2:nth-child(1) {
       color: transparent;
-      -webkit-text-stroke: 2px #03a9f4;
+      -webkit-text-stroke: 2px ${theme.colors.blue};
     }
 
     h2:nth-child(2) {
-      color: #03a9f4;
+      color: ${theme.colors.blue};
       animation: animate 4s ease-in-out infinite;
     }
 

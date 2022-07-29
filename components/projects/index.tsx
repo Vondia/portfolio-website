@@ -96,21 +96,6 @@ const container = parse(
   `
 );
 
-const subTitle = parse(
-  {
-    py: "16",
-    textAlign: "center",
-  },
-  css`
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-
-    @media screen and (min-width: ${theme.breakpoints.large}) {
-      text-align: left;
-    }
-  `
-);
-
 const title = parse(
   {
     py: "16",
@@ -148,6 +133,8 @@ const projects = parse(
 );
 
 const showOnMobile = css`
+  display: flex;
+  flex-direction: column;
   @media screen and (min-width: ${theme.breakpoints.medium}) {
     display: none;
   }

@@ -1,9 +1,7 @@
 import React, { FC, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
-import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { BsFillPersonLinesFill } from "react-icons/bs";
-import Image from "next/image";
 import { Text } from "../../ui/typograhpy/Text";
 import Link from "next/link";
 import * as styles from "./styles";
@@ -105,18 +103,25 @@ export const OverlaySidebarMenu: FC<OverlaySidebarMenuProps> = () => {
                       Let&apos;s connect
                     </Text>
                     <div className={styles.socialMediaButtons}>
-                      <div className={styles.socialMediaButton}>
-                        <FaLinkedinIn />
-                      </div>
-                      <div className={styles.socialMediaButton}>
-                        <FaGithub />
-                      </div>
-                      <div className={styles.socialMediaButton}>
-                        <AiOutlineMail />
-                      </div>
-                      <div className={styles.socialMediaButton}>
-                        <BsFillPersonLinesFill />
-                      </div>
+                      <a
+                        href="https://www.linkedin.com/in/pim-van-den-bosch/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        <button className={styles.socialMediaButton}>
+                          <FaLinkedinIn />
+                        </button>
+                      </a>
+
+                      <a
+                        href="https://github.com/vondia"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        <button className={styles.socialMediaButton}>
+                          <FaGithub />
+                        </button>
+                      </a>
                     </div>
                   </div>
                 </div>

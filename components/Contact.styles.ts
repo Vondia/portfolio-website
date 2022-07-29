@@ -185,7 +185,7 @@ export const inputsBellowPhoneNumber = parse(
 export const sendButton = parse(
   {
     p: "16",
-    color: "white",
+    color: "shade200",
     width: "100%",
     mt: "16",
     position: "relative",

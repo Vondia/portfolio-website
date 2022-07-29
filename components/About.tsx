@@ -4,12 +4,13 @@ import { parse, theme } from "../config/theme";
 import { Text } from "./ui/typograhpy/Text";
 import { Heading } from "./ui/typograhpy/Heading";
 import Image from "next/image";
+import { Container } from "./ui/Container";
 
 type AboutProps = {};
 
 export const About: FC<AboutProps> = () => {
   return (
-    <div id="about" className={container}>
+    <Container id="about" className={container}>
       <div className={parent}>
         <div>
           <Heading variant="h3" className={title}>
@@ -75,7 +76,7 @@ export const About: FC<AboutProps> = () => {
           />
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 
@@ -85,7 +86,6 @@ const container = parse(
     alignItems: "center",
     my: "64",
     width: "100%",
-    px: "8",
   },
   css``
 );

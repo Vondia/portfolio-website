@@ -13,9 +13,9 @@ const Home: NextPage = () => {
         <title>Pim | Front-End Developer</title>
       </Head>
       <Main />
-      <About />
-      <Skills />
       <Projects />
+      <Skills />
+      <About />
       <Contact />
     </>
   );

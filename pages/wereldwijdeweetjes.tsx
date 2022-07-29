@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React from "react";
 import { css } from "linaria";
 import { rgba } from "polished";
 import { parse, theme } from "../config/theme";
@@ -7,7 +7,6 @@ import Image from "next/image";
 import { Heading } from "../components/ui/typograhpy/Heading";
 import { Text } from "../components/ui/typograhpy/Text";
 import { RiRadioButtonFill } from "react-icons/ri";
-import Link from "next/link";
 import { Container } from "../components/ui/Container";
 
 const WereldwijdeWeetjes: NextPage = () => {
@@ -271,7 +270,7 @@ const technologiesListItems = parse(
     display: inline-block;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.4s ease-in-out;
 
     &:before {
       content: "";
@@ -282,7 +281,7 @@ const technologiesListItems = parse(
       left: 0;
       width: 0;
       height: 2px;
-      transition: all 0.2s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
 
     @media screen and (hover: hover) and (pointer: fine) {

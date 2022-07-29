@@ -1,6 +1,6 @@
 export const projectsInformation = [
   {
-    title: "World wide facts",
+    title: "Wereldwijde Weetjes",
     subTitle: "A website build for primaryschool teachers",
     projectUrl: "/wereldwijdeweetjes",
     imageUrl: "/assets/projects/wereldwijdeweetjes.nl.png",

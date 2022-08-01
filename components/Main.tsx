@@ -1,7 +1,6 @@
 import React, { FC } from "react";
 import { css } from "linaria";
 import { parse, theme } from "../config/theme";
-import { rem } from "polished";
 import { Text } from "./ui/typograhpy/Text";
 import { Heading } from "./ui/typograhpy/Heading";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
@@ -14,9 +13,6 @@ export const Main: FC<MainProps> = () => {
     <Container id="home" className={parent}>
       <div className={container}>
         <div>
-          <Text className={topText} variant="regular" color="shade600">
-            Let&apos;s build something together
-          </Text>
           <Heading variant="h1" color="shade700" className={headingText}>
             Hi, I&apos;m{" "}
             <div className={pimText}>
@@ -74,6 +70,11 @@ const parent = parse(
   css`
     height: 65vh;
     text-align: center;
+    margin-top: 7rem;
+
+    @media screen and (min-width: ${theme.breakpoints.small}) {
+      margin-top: unset;
+    }
   `
 );
 
@@ -96,14 +97,9 @@ const container = parse(
   `
 );
 
-const topText = css`
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-`;
-
 const headingText = parse(
   {
-    py: "16",
+    pt: "16",
     display: "flex",
     justifyContent: "center",
   },
@@ -169,14 +165,14 @@ const pimText = parse(
 
 const headingTextsecondLine = parse(
   {
-    py: "8",
+    pb: "16",
   },
   css``
 );
 
 const bottomText = parse(
   {
-    py: "16",
+    p: "16",
     m: "auto",
   },
   css`

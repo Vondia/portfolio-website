@@ -52,7 +52,7 @@ export const Skills: FC = () => {
 const container = parse(
   {
     width: "100%",
-    py: "64",
+    pb: "64",
   },
   css`
     @media screen and (min-width: ${theme.breakpoints.large}) {
@@ -126,19 +126,19 @@ const span = parse(
       filter: blur(4px);
 
       &:nth-child(1) {
-        animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        animation: fade-in 0.4s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
       }
 
       &:nth-child(2) {
-        animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        animation: fade-in 0.4s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
       }
 
       &:nth-child(3) {
-        animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        animation: fade-in 0.4s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
       }
 
       &:nth-child(4) {
-        animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+        animation: fade-in 0.4s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
       }
 
       @keyframes fade-in {

@@ -40,10 +40,8 @@ export const bionicReading = css`
 
 export const image = parse(
   {
-    display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    m: "auto",
     p: "24",
   },
   css`
@@ -52,11 +50,77 @@ export const image = parse(
     transition: all 0.2s ease-in;
     border-radius: 0.75rem;
 
-    @media screen and (hover: hover) and (pointer: fine) {
-      &:hover {
-        transform: scale(1.05);
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(3rem);
+    transition: all 1s cubic-bezier(0.08, 0.62, 0.25, 1);
+    &[data-in-view] {
+      animation-name: fadeIn;
+      animation-fill-mode: forwards;
+      animation-duration: 0.5s;
+      animation-delay: 0.2s;
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(3rem);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     }
+  `
+);
+
+export const secondImage = parse(
+  {
+    alignItems: "center",
+    justifyContent: "center",
+    p: "24",
+  },
+  css`
+    display: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 0.75rem;
+    transition: all 0.2s ease-in;
+    border-radius: 0.75rem;
+    @media screen and (min-width: ${theme.breakpoints.large}) {
+      opacity: 0;
+      transform: translateY(3rem);
+      transition: all 1s cubic-bezier(0.08, 0.62, 0.25, 1);
+      display: inline-block;
+      &[data-in-vieww] {
+        animation-name: fadeIn;
+        animation-fill-mode: forwards;
+        animation-duration: 0.5s;
+        animation-delay: 0.2s;
+
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+            transform: translateY(3rem);
+          }
+
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+  `
+);
+
+export const images = parse(
+  {
+    display: "flex",
+    alignItems: "center",
+  },
+  css`
+    flex-direction: column;
   `
 );
 

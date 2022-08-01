@@ -135,10 +135,6 @@ export const listItem = parse(
         }
       }
     }
-    &[data-active="true"] {
-      color: ${theme.colors.blue};
-      font-weight: 600;
-    }
   `
 );
 

@@ -42,8 +42,6 @@ export const Navbar: FC<NavbarProps> = ({ animationVariant }) => {
     window.addEventListener("scroll", handleShadow);
   }, []);
 
-  const currentRoute = router.asPath;
-
   return (
     <nav
       className={navBg === "transparent" ? styles.parentProject : styles.parent}
@@ -54,11 +52,7 @@ export const Navbar: FC<NavbarProps> = ({ animationVariant }) => {
           <ul style={{ color: `${linkColor}` }} className={styles.hideOnMobile}>
             <Link href="/">
               <a>
-                <Text
-                  variant="small"
-                  className={styles.listItem}
-                  data-active={currentRoute === "/"}
-                >
+                <Text variant="small" className={styles.listItem}>
                   {" "}
                   Home
                 </Text>
@@ -66,11 +60,7 @@ export const Navbar: FC<NavbarProps> = ({ animationVariant }) => {
             </Link>
             <Link href="/#projects">
               <a>
-                <Text
-                  variant="small"
-                  className={styles.listItem}
-                  data-active={currentRoute === "/#projects"}
-                >
+                <Text variant="small" className={styles.listItem}>
                   {" "}
                   Projects
                 </Text>
@@ -78,23 +68,15 @@ export const Navbar: FC<NavbarProps> = ({ animationVariant }) => {
             </Link>
             <Link href="/#skills">
               <a>
-                <Text
-                  variant="small"
-                  className={styles.listItem}
-                  data-active={currentRoute === "/#skills"}
-                >
+                <Text variant="small" className={styles.listItem}>
                   {" "}
                   Skills
                 </Text>
               </a>
             </Link>
-            <Link href="/#about" data-active={currentRoute === "/#about"}>
+            <Link href="/#about">
               <a>
-                <Text
-                  variant="small"
-                  className={styles.listItem}
-                  data-active={currentRoute === "/#about"}
-                >
+                <Text variant="small" className={styles.listItem}>
                   {" "}
                   About
                 </Text>
@@ -102,11 +84,7 @@ export const Navbar: FC<NavbarProps> = ({ animationVariant }) => {
             </Link>
             <Link href="/#contact">
               <a>
-                <Text
-                  variant="small"
-                  className={styles.listItem}
-                  data-active={currentRoute === "/#contact"}
-                >
+                <Text variant="small" className={styles.listItem}>
                   {" "}
                   Contact
                 </Text>

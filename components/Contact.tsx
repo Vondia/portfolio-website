@@ -9,6 +9,7 @@ import Link from "next/link";
 import { Input } from "./ui/form/Input";
 import { Span } from "./ui/typograhpy/Span";
 import { TextArea } from "./ui/form/TextArea";
+import { Container } from "./ui/Container";
 
 type ContactProps = {};
 
@@ -28,7 +29,7 @@ export const Contact: FC<ContactProps> = () => {
     setMessage(message);
   };
   return (
-    <div id="contact" className={styles.parent}>
+    <Container id="contact" className={styles.parent}>
       <div className={styles.container}>
         <Heading variant="h3" className={styles.title}>
           Get in touch
@@ -52,10 +53,12 @@ export const Contact: FC<ContactProps> = () => {
                 </Heading>
                 <Text variant="regular">Front-End Developer</Text>
                 <Text variant="regular" className={styles.myNameDescription}>
-                  Currently I&apos;m still employed by{" "}
-                  <a href="https://reverseddigital.com/">Reversed Digital</a>,
-                  but I&apos;m looking for a bigger digital agency to further
-                  develop my skills.
+                  Currently I&apos;m working for a small digital agency by the
+                  name of{" "}
+                  <a href="https://reverseddigital.com/">Reversed Digital</a>. I
+                  discovered here that I love the work at a digital agency but
+                  at this point of my career a bigger agency would help me
+                  develop quicker.
                 </Text>
               </div>
               <div>
@@ -136,8 +139,8 @@ export const Contact: FC<ContactProps> = () => {
                   <TextArea
                     rows={10}
                     name="message"
-                    label="Message"
                     value={message}
+                    label="Message"
                     required={true}
                     onChange={(e) => setMessage(e.target.value)}
                   />
@@ -157,6 +160,6 @@ export const Contact: FC<ContactProps> = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };

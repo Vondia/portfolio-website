@@ -126,6 +126,9 @@ export const listItem = parse(
       transform: scaleX(0);
       transition: transform 0.3s ease-in-out;
     }
+    &[data-hover-color]::before {
+      background-color: ${theme.colors.sidebar}!important;
+    }
 
     @media screen and (hover: hover) and (pointer: fine) {
       &:hover {

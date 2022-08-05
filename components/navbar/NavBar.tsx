@@ -52,7 +52,11 @@ export const Navbar: FC<NavbarProps> = ({ animationVariant }) => {
           <ul style={{ color: `${linkColor}` }} className={styles.hideOnMobile}>
             <Link href="/">
               <a>
-                <Text variant="small" className={styles.listItem}>
+                <Text
+                  variant="small"
+                  data-hover-color={linkColor === "#fcf5ef" ? "" : null}
+                  className={styles.listItem}
+                >
                   {" "}
                   Home
                 </Text>
@@ -60,7 +64,11 @@ export const Navbar: FC<NavbarProps> = ({ animationVariant }) => {
             </Link>
             <Link href="/#projects">
               <a>
-                <Text variant="small" className={styles.listItem}>
+                <Text
+                  variant="small"
+                  data-hover-color={linkColor === "#fcf5ef" ? "" : null}
+                  className={styles.listItem}
+                >
                   {" "}
                   Projects
                 </Text>
@@ -68,7 +76,11 @@ export const Navbar: FC<NavbarProps> = ({ animationVariant }) => {
             </Link>
             <Link href="/#skills">
               <a>
-                <Text variant="small" className={styles.listItem}>
+                <Text
+                  variant="small"
+                  data-hover-color={linkColor === "#fcf5ef" ? "" : null}
+                  className={styles.listItem}
+                >
                   {" "}
                   Skills
                 </Text>
@@ -76,7 +88,11 @@ export const Navbar: FC<NavbarProps> = ({ animationVariant }) => {
             </Link>
             <Link href="/#about">
               <a>
-                <Text variant="small" className={styles.listItem}>
+                <Text
+                  variant="small"
+                  data-hover-color={linkColor === "#fcf5ef" ? "" : null}
+                  className={styles.listItem}
+                >
                   {" "}
                   About
                 </Text>
@@ -84,7 +100,11 @@ export const Navbar: FC<NavbarProps> = ({ animationVariant }) => {
             </Link>
             <Link href="/#contact">
               <a>
-                <Text variant="small" className={styles.listItem}>
+                <Text
+                  variant="small"
+                  data-hover-color={linkColor === "#fcf5ef" ? "" : null}
+                  className={styles.listItem}
+                >
                   {" "}
                   Contact
                 </Text>

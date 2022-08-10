@@ -49,7 +49,8 @@ export const theme = {
     // System
     lightBlue: "#0beef9",
     blue: "#82a1f6",
-    background: "#111317",
+    backgroundDark: "#111317",
+    background: "#fcf5ef",
     sidebar: "#fcf5ef",
     sidebarCollapsible: "#16181D",
     success: "#30BA67",
@@ -58,7 +59,7 @@ export const theme = {
   },
   gradients: {
     default: "linear-gradient(315deg, #6A47FF -62%, #82a1f6 104%)",
-    hover: "linear-gradient(315deg, #6A47FF 5.5%, #82a1f6 97%)",
+    hover: "linear-gradient(315deg, #6A47FF 5.5%, #82a1f6 95%)",
     fill: "linear-gradient(94deg, rgba(16, 198, 255, 0.05) 5.50%, rgba(118, 54, 255, 0.05) 97%);",
   },
   effects: {

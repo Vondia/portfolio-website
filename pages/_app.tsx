@@ -51,7 +51,7 @@ export const reveal = parse(
     left: 0;
     pointer-events: none;
     z-index: 5;
-    background: ${theme.colors.sidebar};
+    background: ${theme.colors.background};
     -webkit-mask-image: radial-gradient(
       circle 400px at 50% 50%,
       transparent,

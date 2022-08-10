@@ -53,8 +53,8 @@ export const parent = parse(
     left: 0;
     z-index: 100;
     background-image: radial-gradient(
-      ${rgba(theme.colors.sidebar, 0.75)} 1px,
-      ${theme.colors.sidebar} 1px
+      ${rgba(theme.colors.background, 0.75)} 1px,
+      ${theme.colors.background} 1px
     );
     background-repeat: initial;
     background-size: 4px 4px;
@@ -127,7 +127,7 @@ export const listItem = parse(
       transition: transform 0.3s ease-in-out;
     }
     &[data-hover-color]::before {
-      background-color: ${theme.colors.sidebar}!important;
+      background-color: ${theme.colors.background}!important;
     }
 
     @media screen and (hover: hover) and (pointer: fine) {

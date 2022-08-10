@@ -49,7 +49,7 @@ export const sidebar = parse(
     height: "100%",
   },
   css`
-    background: ${theme.colors.sidebar};
+    background: ${theme.colors.background};
     z-index: 101;
     width: 100%;
     right: 0;

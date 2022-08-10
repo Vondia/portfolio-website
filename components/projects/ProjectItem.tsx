@@ -27,7 +27,6 @@ export const ProjectItem: FC<ProjectItemProps> = ({
 }) => {
   const [viewRef, inView] = useInView({ triggerOnce: true });
   const visitedHomePageOnce = useVisitedHomePage();
-
   return (
     <div
       className={parent}

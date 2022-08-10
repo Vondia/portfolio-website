@@ -33,7 +33,6 @@ export const About: FC<AboutProps> = () => {
                 >
                   Bionic reading
                 </a>{" "}
-                activated:
               </Text>
               <Switch.Root
                 className={styles.styledSwitch}

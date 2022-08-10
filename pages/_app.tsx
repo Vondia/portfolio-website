@@ -1,3 +1,4 @@
+import React from "react";
 import "../styles/font-face.css";
 import "../styles/global-styles.css";
 import "../styles/reset.css";
@@ -8,6 +9,7 @@ import { Navbar } from "../components/navbar/NavBar";
 import { useEffect, useState } from "react";
 import { parse, theme } from "../config/theme";
 import { css } from "linaria";
+import { VisitedHomePageProvider } from "../components/VisitedHomePage";
 
 export type AnimationVariant = "animate" | "visible" | "hidden";
 
@@ -24,11 +26,13 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <Navbar animationVariant={animationVariant} />
-      <div className={content} data-animation-variant={animationVariant}>
-        <Component {...pageProps} />
-      </div>
-      <span className={reveal} data-animation-variant={animationVariant} />
+      <VisitedHomePageProvider>
+        <Navbar animationVariant={animationVariant} />
+        <div className={content} data-animation-variant={animationVariant}>
+          <Component {...pageProps} />
+        </div>
+        <span className={reveal} data-animation-variant={animationVariant} />
+      </VisitedHomePageProvider>
     </>
   );
 }

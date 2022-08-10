@@ -8,6 +8,7 @@ import { Heading } from "../ui/typograhpy/Heading";
 import { IoIosArrowForward } from "react-icons/Io";
 import { useInView } from "react-intersection-observer";
 import { AnimationVariant } from "../../pages/_app";
+import { useVisitedHomePage } from "../VisitedHomePage";
 
 type ProjectItemProps = {
   title: string;
@@ -25,11 +26,14 @@ export const ProjectItem: FC<ProjectItemProps> = ({
   animation,
 }) => {
   const [viewRef, inView] = useInView({ triggerOnce: true });
+  const visitedHomePageOnce = useVisitedHomePage();
+
   return (
     <div
       className={parent}
       id={title}
       data-in-view={inView ? "" : null}
+      data-on-first-render={inView && !visitedHomePageOnce ? "" : null}
       data-animation-variant={animation}
     >
       <div className={image} ref={viewRef}>
@@ -79,8 +83,10 @@ const parent = parse(
       animation-name: fadeIn;
       animation-fill-mode: forwards;
       animation-duration: 0.5s;
-      &:nth-child(1) {
-        animation-delay: 1.3s;
+      &[data-on-first-render] {
+        &:nth-child(1) {
+          animation-delay: 1.3s;
+        }
       }
       &:nth-child(2) {
         animation-delay: 0s;

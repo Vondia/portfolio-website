@@ -17,7 +17,7 @@ const Gassan: NextPage = () => {
         <Image
           className={image}
           src="/../public/assets/projects/gassan-hq.png"
-          alt="image of gassan homepage"
+          alt="image of gassan hq"
           layout="fill"
           objectFit="cover"
         />

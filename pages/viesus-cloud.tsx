@@ -17,7 +17,7 @@ const ViesusCloud: NextPage = () => {
         <Image
           className={image}
           src="/../public/assets/projects/viesus.cloud.png"
-          alt="image of frank-energie homepage"
+          alt="image of viesus cloud' homepage"
           layout="fill"
           objectFit="cover"
         />

@@ -17,7 +17,7 @@ const WereldwijdeWeetjes: NextPage = () => {
         <Image
           className={image}
           src="/../public/assets/projects/wereldwijdeweetjes.nl.png"
-          alt="image of frank-energie homepage"
+          alt="image of wereldwijde weetjes' homepage"
           layout="fill"
           objectFit="cover"
         />

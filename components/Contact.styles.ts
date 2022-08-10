@@ -254,3 +254,45 @@ export const moveToTopIcon = parse(
     }
   `
 );
+
+export const link = parse(
+  {
+    position: "relative",
+  },
+  css`
+    font-style: italic;
+    background-image: linear-gradient(
+      to right,
+      #6a47ff,
+      #82a1f6 50%,
+      #1f2937 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.4s ease-in-out;
+
+    &:before {
+      content: "";
+      background-image: linear-gradient(to right, #6a47ff, #82a1f6);
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    @media screen and (hover: hover) and (pointer: fine) {
+      &:hover {
+        background-position: 0;
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+  `
+);

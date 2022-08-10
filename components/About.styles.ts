@@ -179,6 +179,7 @@ export const bionicLink = parse(
     position: "relative",
   },
   css`
+    font-style: italic;
     background-image: linear-gradient(
       to right,
       #6a47ff,

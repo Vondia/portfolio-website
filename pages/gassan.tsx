@@ -16,7 +16,7 @@ const Gassan: NextPage = () => {
         <div className={overlay} />
         <Image
           className={image}
-          src="/../public/assets/projects/gassan.nl.png"
+          src="/../public/assets/projects/gassan-hq.png"
           alt="image of gassan homepage"
           layout="fill"
           objectFit="cover"
@@ -30,21 +30,13 @@ const Gassan: NextPage = () => {
           <Text variant="large">
             Gassan is a project I worked on while working for Reversed Digital.
             The website was build using React/NextJs and for me was my first
-            encounter with{" "}
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://styled-components.com/"
-            >
-              styled components
-            </a>
-            . I had never worked with it before and it&apos;s a real different
-            way of styling. The awesome thing about it from my point of view is
-            being able to add props to styled components. The reason why i
-            prefer linaria/CSS is that you can achieve the stuff you want to do
-            with props as well with data attributes. But it&apos;s a lot
-            cleaner. I learned a lot working on this project adding new
-            components and fixing issues.
+            encounter with styled components. I had never worked with it before
+            and it&apos;s a real different way of styling. The awesome thing
+            about it from my point of view is being able to add props to styled
+            components. The reason why i prefer linaria/CSS is that you can
+            achieve the stuff you want to do with props as well with data
+            attributes. But it&apos;s a lot cleaner. I learned a lot working on
+            this project adding new components and fixing issues.
           </Text>
         </div>
         <div className={technologiesContainer}>
@@ -143,7 +135,7 @@ const overlay = parse(
     left: 0;
     height: 30vh;
     z-index: 2;
-    background: ${rgba(theme.colors.background, 0.7)};
+    background: ${rgba(theme.colors.backgroundDark, 0.7)};
 
     @media screen and (min-width: ${theme.breakpoints.large}) {
       height: 50vh;
@@ -210,7 +202,7 @@ const technologiesListItems = parse(
       to right,
       #6a47ff,
       #82a1f6 50%,
-      #454a54 50%
+      #1f2937 50%
     );
     background-size: 200% 100%;
     background-position: -100%;

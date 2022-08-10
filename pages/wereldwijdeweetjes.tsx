@@ -196,7 +196,7 @@ const overlay = parse(
     left: 0;
     height: 30vh;
     z-index: 2;
-    background: ${rgba(theme.colors.background, 0.7)};
+    background: ${rgba(theme.colors.backgroundDark, 0.7)};
 
     @media screen and (min-width: ${theme.breakpoints.large}) {
       height: 50vh;

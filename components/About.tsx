@@ -159,7 +159,7 @@ export const About: FC<AboutProps> = () => {
                 <strong className={styles.bionicReading}>indust</strong>ry{" "}
                 <strong className={styles.bionicReading}>fo</strong>r{" "}
                 <strong className={styles.bionicReading}>th</strong>e{" "}
-                <strong className={styles.bionicReading}>bett</strong>er
+                <strong className={styles.bionicReading}>bett</strong>er{" "}
                 <strong className={styles.bionicReading}>par</strong>t{" "}
                 <strong className={styles.bionicReading}>o</strong>f a{" "}
                 <strong className={styles.bionicReading}>deca</strong>de (8{" "}

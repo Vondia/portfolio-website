@@ -1,19 +1,36 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { Text } from "../../ui/typograhpy/Text";
 import Link from "next/link";
 import * as styles from "./styles";
+import { useRouter } from "next/router";
 
 type OverlaySidebarMenuProps = {};
 
 export const OverlaySidebarMenu: FC<OverlaySidebarMenuProps> = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [linkColor, setLinkColor] = useState("#1f2937");
+  const router = useRouter();
+
+  useEffect(() => {
+    if (
+      router.asPath === "/gassan" ||
+      router.asPath === "/frank-energie" ||
+      router.asPath === "/viesus-cloud" ||
+      router.asPath === "/wereldwijdeweetjes"
+    ) {
+      setLinkColor("#fcf5ef");
+    } else {
+      setLinkColor("#1f2937");
+    }
+  }, [router]);
+
   return (
     <Dialog.Root open={isOpen} onOpenChange={setIsOpen}>
       <Dialog.Trigger asChild>
-        <button className={styles.hideOnDesktop}>
+        <button className={styles.hideOnDesktop} style={{ color: linkColor }}>
           <AiOutlineMenu size={25} />
         </button>
       </Dialog.Trigger>
@@ -57,7 +74,7 @@ export const OverlaySidebarMenu: FC<OverlaySidebarMenuProps> = () => {
                         </Text>
                       </a>
                     </Link>
-                    <Link href="#projects">
+                    <Link href="/#projects">
                       <a onClick={() => setIsOpen(false)}>
                         <Text
                           variant="small"

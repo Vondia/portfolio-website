@@ -16,7 +16,7 @@ const FrankEnergie: NextPage = () => {
         <div className={overlay} />
         <Image
           className={image}
-          src="/../public/assets/projects/frankenergie.nl.png"
+          src="/../public/assets/projects/frank-energie-page.png"
           alt="image of frank-energie homepage"
           layout="fill"
           objectFit="cover"
@@ -138,7 +138,7 @@ const overlay = parse(
     left: 0;
     height: 30vh;
     z-index: 2;
-    background: ${rgba(theme.colors.background, 0.7)};
+    background: ${rgba(theme.colors.backgroundDark, 0.7)};
 
     @media screen and (min-width: ${theme.breakpoints.large}) {
       height: 50vh;

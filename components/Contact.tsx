@@ -55,9 +55,16 @@ export const Contact: FC<ContactProps> = () => {
                 <Text variant="regular" className={styles.myNameDescription}>
                   Currently I&apos;m working for a small digital agency by the
                   name of{" "}
-                  <a href="https://reverseddigital.com/">Reversed Digital</a>. I
-                  discovered here that I love the work at a digital agency but
-                  at this point of my career a bigger agency would help me
+                  <a
+                    href="https://reverseddigital.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.link}
+                  >
+                    Reversed Digital
+                  </a>
+                  . I discovered here that I love the work at a digital agency
+                  but at this point of my career a bigger agency would help me
                   develop quicker.
                 </Text>
               </div>

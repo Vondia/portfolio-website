@@ -5,7 +5,7 @@ import { css } from "linaria";
 import { parse, theme } from "../../config/theme";
 import { Text } from "../ui/typograhpy/Text";
 import { Heading } from "../ui/typograhpy/Heading";
-import { IoIosArrowForward } from "react-icons/Io";
+import { IoIosArrowForward } from "react-icons/io";
 import { useInView } from "react-intersection-observer";
 import { AnimationVariant } from "../../pages/_app";
 import { useVisitedHomePage } from "../VisitedHomePage";

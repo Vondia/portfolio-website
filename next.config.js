@@ -4,5 +4,4 @@ module.exports = withLinaria({
   linaria: {
     /* linaria options here */
   },
-  experimental: { images: { allowFutureImage: true } }
 });

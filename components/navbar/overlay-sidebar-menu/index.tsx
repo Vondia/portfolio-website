@@ -64,7 +64,7 @@ export const OverlaySidebarMenu: FC<OverlaySidebarMenuProps> = () => {
                     className={styles.overlayTitleText}
                   >
                     {" "}
-                    Let&apos;s build something legendary together
+                    Welcome to my portfolio site
                   </Text>
                 </div>
                 <div className={styles.parentListItemOverlay}>

@@ -54,7 +54,7 @@ export const sidebar = parse(
     width: 100%;
     right: 0;
     top: 0;
-    overflow: hidden;
+    overflow: scroll;
     transition-property: width;
     transition-duration: 0.2s;
 
@@ -207,7 +207,7 @@ export const overlayTitle = parse(
 
 export const overlayTitleText = parse(
   {
-    py: "16",
+    mt: "auto",
   },
   css``
 );

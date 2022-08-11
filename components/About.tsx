@@ -633,7 +633,7 @@ export const About: FC<AboutProps> = () => {
           >
             <Image
               className={styles.photo}
-              src="/assets/pim-ardenne.jpg"
+              src="/assets/pim-reversed-ardenne.jpg"
               alt="At the reversed Ardenne trip"
               width={400}
               height={500}

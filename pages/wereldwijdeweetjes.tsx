@@ -16,7 +16,7 @@ const WereldwijdeWeetjes: NextPage = () => {
         <div className={overlay} />
         <Image
           className={image}
-          src="/../public/assets/projects/wereldwijdeweetjes.nl.png"
+          src="/assets/projects/wereldwijdeweetjes.nl.png"
           alt="image of wereldwijde weetjes' homepage"
           layout="fill"
           objectFit="cover"

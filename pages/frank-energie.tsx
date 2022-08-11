@@ -16,7 +16,7 @@ const FrankEnergie: NextPage = () => {
         <div className={overlay} />
         <Image
           className={image}
-          src="/../public/assets/projects/frank-energie-page.png"
+          src="/assets/projects/frank-energie-page.png"
           alt="image of frank-energie homepage"
           layout="fill"
           objectFit="cover"

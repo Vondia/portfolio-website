@@ -16,7 +16,7 @@ const ViesusCloud: NextPage = () => {
         <div className={overlay} />
         <Image
           className={image}
-          src="/../public/assets/projects/viesus.cloud.png"
+          src="/assets/projects/viesus.cloud.png"
           alt="image of viesus cloud' homepage"
           layout="fill"
           objectFit="cover"

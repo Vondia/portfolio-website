@@ -16,7 +16,7 @@ const Gassan: NextPage = () => {
         <div className={overlay} />
         <Image
           className={image}
-          src="/../public/assets/projects/gassan-hq.png"
+          src="/assets/projects/gassan-hq.png"
           alt="image of gassan hq"
           layout="fill"
           objectFit="cover"

@@ -35,7 +35,7 @@ export const ProjectItem: FC<ProjectItemProps> = ({
       data-on-first-render={inView && !visitedHomePageOnce ? "" : null}
       data-animation-variant={animation}
     >
-      <div className={image} ref={viewRef}>
+      <div ref={viewRef}>
         <Image src={imageUrl} alt="/" width="400px" height="400px" />
       </div>
       <div className={text}>
@@ -83,23 +83,16 @@ const parent = parse(
       animation-fill-mode: forwards;
       animation-duration: 0.5s;
       &[data-on-first-render] {
-        &:nth-child(1) {
-          animation-delay: 1.3s;
-        }
-      }
-      &:nth-child(2) {
-        animation-delay: 0s;
-      }
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+            transform: translateY(3rem);
+          }
 
-      @keyframes fadeIn {
-        0% {
-          opacity: 0;
-          transform: translateY(3rem);
-        }
-
-        100% {
-          opacity: 1;
-          transform: translateY(0);
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
       }
     }
@@ -108,10 +101,37 @@ const parent = parse(
       max-width: 400px;
       margin-x: unset;
     }
+
+    @media screen and (min-width: ${theme.breakpoints.medium}) {
+      &[data-animation-variant="animate"]&&[data-in-view] {
+        display: inline-block;
+        animation-name: fadeIn;
+        animation-fill-mode: forwards;
+        animation-duration: 0.5s;
+        &[data-on-first-render] {
+          &:nth-child(1) {
+            animation-delay: 1.3s;
+          }
+        }
+        &:nth-child(2) {
+          animation-delay: 0s;
+        }
+
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+            transform: translateY(3rem);
+          }
+
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      }
+    }
   `
 );
-
-const image = parse({}, css``);
 
 const buttonDiv = parse(
   {

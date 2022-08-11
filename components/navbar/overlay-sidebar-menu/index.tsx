@@ -21,7 +21,7 @@ export const OverlaySidebarMenu: FC<OverlaySidebarMenuProps> = () => {
       router.asPath === "/viesus-cloud" ||
       router.asPath === "/wereldwijdeweetjes"
     ) {
-      setLinkColor("#fcf5ef");
+      setLinkColor("#A8AFBD");
     } else {
       setLinkColor("#1f2937");
     }
@@ -30,7 +30,12 @@ export const OverlaySidebarMenu: FC<OverlaySidebarMenuProps> = () => {
   return (
     <Dialog.Root open={isOpen} onOpenChange={setIsOpen}>
       <Dialog.Trigger asChild>
-        <button className={styles.hideOnDesktop} style={{ color: linkColor }}>
+        <button
+          className={styles.hideOnDesktop}
+          style={{
+            color: linkColor,
+          }}
+        >
           <AiOutlineMenu size={25} />
         </button>
       </Dialog.Trigger>

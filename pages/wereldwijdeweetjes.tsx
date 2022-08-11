@@ -24,28 +24,35 @@ const WereldwijdeWeetjes: NextPage = () => {
       </div>
 
       <Container className={mainTextContainer}>
-        <div>
+        <div className={textBlockPlacement}>
           <Heading variant="h3" mb="16">
             Wereldwijde Weetjes
           </Heading>
           <Text variant="large">
-            Wereldwijde Weetjes is my portfolio project at the end of
-            Codaisseur. It was an idea I had while talking to my mother,
-            she&apos;s a primary school teacher. And she noticed she had a
-            &apos;dead&apos; period right before breaks. Where the kids would be
-            finished with their work but there wouldn&apos;t be enough time to
-            start a new subject. And since she loves to travel herself she
-            thought it would be cool to teach the children something about the
-            world. And then more specifically a place she visited in one of her
-            holidays. She is great with Prezi but she wanted a platform she
-            could open, which contained all her Prezi&apos;s. And therefor she
-            could easily open on her board and share an adventure with the
-            class. The challenge for me was to build this and keep it as simple
-            as possible becuase she&apos;s not a super technical person. So she
-            would have to be able to log in, to some sort of admin environment
-            where she could easilly add new Prezi&apos;s and add a question
-            about that Prezi to test the class at the end of they paid
-            attention.
+            <a
+              href="https://www.wereldwijdeweetjes.nl/"
+              target="_blank"
+              rel="noreferrer"
+              className={link}
+            >
+              Wereldwijde Weetjes
+            </a>{" "}
+            is my portfolio project at the end of Codaisseur. It was an idea I
+            had while talking to my mother, she&apos;s a primary school teacher.
+            And she noticed she had a &apos;dead&apos; period right before
+            breaks. Where the kids would be finished with their work but there
+            wouldn&apos;t be enough time to start a new subject. And since she
+            loves to travel herself she thought it would be cool to teach the
+            children something about the world. And then more specifically a
+            place she visited in one of her holidays. She is great with Prezi
+            but she wanted a platform she could open, which contained all her
+            Prezi&apos;s. And therefor she could easily open on her board and
+            share an adventure with the class. The challenge for me was to build
+            this and keep it as simple as possible becuase she&apos;s not a
+            super technical person. So she would have to be able to log in, to
+            some sort of admin environment where she could easilly add new
+            Prezi&apos;s and add a question about that Prezi to test the class
+            at the end of they paid attention.
           </Text>
         </div>
         <div className={technologiesContainer}>
@@ -164,6 +171,14 @@ const WereldwijdeWeetjes: NextPage = () => {
               </li>
             </ul>
           </div>
+          <div className={bottomImage}>
+            <Image
+              src="/assets/click-on-tech.png"
+              alt="Klik voor meer informatie"
+              width="249px"
+              height="85"
+            />
+          </div>
         </div>
       </Container>
     </div>
@@ -234,19 +249,75 @@ const mainTextContainer = parse(
   `
 );
 
-const technologiesContainer = css`
-  min-width: 16rem;
-  width: fit-content;
-  height: fit-content;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  border-radius: 0.75rem;
-  white-space: nowrap;
-  justify-self: center;
-`;
+const technologiesContainer = parse(
+  {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  css`
+    flex-direction: column;
+  `
+);
 
-const padding = parse({
-  p: "16",
-});
+const padding = parse(
+  {
+    p: "16",
+  },
+  css`
+    min-width: 16rem;
+    width: fit-content;
+    height: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 0.75rem;
+    white-space: nowrap;
+    justify-self: center;
+    opacity: 0;
+    transform: translateY(3rem);
+    transition: all 1s cubic-bezier(0.08, 0.62, 0.25, 1);
+
+    display: inline-block;
+    animation-name: fadeIn;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    animation-delay: 1.3s;
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-3rem);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media screen and (min-width: ${theme.breakpoints.medium}) {
+      animation: bounce-in-right 2s ease forwards;
+      animation-delay: 0.2s;
+
+      @keyframes bounce-in-right {
+        0% {
+          opacity: 0;
+          transform: translateX(2000px);
+        }
+        60% {
+          opacity: 1;
+          transform: translateX(-30px);
+        }
+        80% {
+          transform: translateX(10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    }
+  `
+);
 
 const technologiesText = parse({
   pb: "8",
@@ -263,7 +334,7 @@ const technologiesListItems = parse(
       to right,
       #6a47ff,
       #82a1f6 50%,
-      #454a54 50%
+      #1f2937 50%
     );
     background-size: 200% 100%;
     background-position: -100%;
@@ -310,9 +381,71 @@ const list = parse(
   },
   css`
     grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.25rem;
 
     @media screen and (min-width: ${theme.breakpoints.medium}) {
       grid-template-columns: 1fr;
+    }
+  `
+);
+
+const bottomImage = parse(
+  {
+    display: "flex",
+    justifyContent: "flex-end",
+    mt: "8",
+  },
+  css`
+    margin-top: -1rem;
+    margin-right: -1rem;
+    @media screen and (min-width: ${theme.breakpoints.medium}) {
+      margin-right: -8rem;
+    }
+  `
+);
+
+const textBlockPlacement = parse({
+  mb: "auto",
+});
+
+export const link = parse(
+  {
+    position: "relative",
+  },
+  css`
+    font-style: italic;
+    background-image: linear-gradient(
+      to right,
+      #6a47ff,
+      #82a1f6 50%,
+      #454a54 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.4s ease-in-out;
+
+    &:before {
+      content: "";
+      background-image: linear-gradient(to right, #6a47ff, #82a1f6);
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    @media screen and (hover: hover) and (pointer: fine) {
+      &:hover {
+        background-position: 0;
+        &:before {
+          width: 100%;
+        }
+      }
     }
   `
 );

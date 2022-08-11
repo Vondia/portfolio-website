@@ -24,7 +24,7 @@ const ViesusCloud: NextPage = () => {
       </div>
 
       <Container className={mainTextContainer}>
-        <div>
+        <div className={textBlockPlacement}>
           <Heading variant="h3" mb="16">
             Viesus Cloud
           </Heading>
@@ -106,6 +106,14 @@ const ViesusCloud: NextPage = () => {
               </li>
             </ul>
           </div>
+          <div className={bottomImage}>
+            <Image
+              src="/assets/click-on-tech.png"
+              alt="Klik voor meer informatie"
+              width="249px"
+              height="85"
+            />
+          </div>
         </div>
       </Container>
     </div>
@@ -176,19 +184,75 @@ const mainTextContainer = parse(
   `
 );
 
-const technologiesContainer = css`
-  min-width: 16rem;
-  width: fit-content;
-  height: fit-content;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  border-radius: 0.75rem;
-  white-space: nowrap;
-  justify-self: center;
-`;
+const technologiesContainer = parse(
+  {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  css`
+    flex-direction: column;
+  `
+);
 
-const padding = parse({
-  p: "16",
-});
+const padding = parse(
+  {
+    p: "16",
+  },
+  css`
+    min-width: 16rem;
+    width: fit-content;
+    height: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 0.75rem;
+    white-space: nowrap;
+    justify-self: center;
+    opacity: 0;
+    transform: translateY(3rem);
+    transition: all 1s cubic-bezier(0.08, 0.62, 0.25, 1);
+
+    display: inline-block;
+    animation-name: fadeIn;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    animation-delay: 1.3s;
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-3rem);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media screen and (min-width: ${theme.breakpoints.medium}) {
+      animation: bounce-in-right 2s ease forwards;
+      animation-delay: 0.2s;
+
+      @keyframes bounce-in-right {
+        0% {
+          opacity: 0;
+          transform: translateX(2000px);
+        }
+        60% {
+          opacity: 1;
+          transform: translateX(-30px);
+        }
+        80% {
+          transform: translateX(10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    }
+  `
+);
 
 const technologiesText = parse({
   pb: "8",
@@ -205,7 +269,7 @@ const technologiesListItems = parse(
       to right,
       #6a47ff,
       #82a1f6 50%,
-      #454a54 50%
+      #1f2937 50%
     );
     background-size: 200% 100%;
     background-position: -100%;
@@ -252,11 +316,31 @@ const list = parse(
   },
   css`
     grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.25rem;
 
     @media screen and (min-width: ${theme.breakpoints.medium}) {
       grid-template-columns: 1fr;
     }
   `
 );
+
+const bottomImage = parse(
+  {
+    display: "flex",
+    justifyContent: "flex-end",
+    mt: "8",
+  },
+  css`
+    margin-top: -1rem;
+    margin-right: -1rem;
+    @media screen and (min-width: ${theme.breakpoints.medium}) {
+      margin-right: -8rem;
+    }
+  `
+);
+
+const textBlockPlacement = parse({
+  mb: "auto",
+});
 
 export default ViesusCloud;

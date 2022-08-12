@@ -5,7 +5,6 @@ export const container = parse(
   {
     display: "flex",
     alignItems: "center",
-    my: "64",
     width: "100%",
   },
   css``

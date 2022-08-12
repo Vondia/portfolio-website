@@ -6,15 +6,15 @@ import { Container } from "./ui/Container";
 import * as Switch from "@radix-ui/react-switch";
 import * as styles from "./About.styles";
 import { useInView } from "react-intersection-observer";
+import { spacerBottomL } from "../lib/spacers";
+import { cx } from "linaria";
 
-type AboutProps = {};
-
-export const About: FC<AboutProps> = () => {
+export const About: FC = () => {
   const [viewRef, inView] = useInView();
   const [viewRef2, inView2] = useInView();
   const [checked, setChecked] = useState(false);
   return (
-    <Container id="about" className={styles.container}>
+    <Container id="about" className={cx(styles.container, spacerBottomL)}>
       <div className={styles.parent}>
         <div>
           <div className={styles.headerParent}>

@@ -1,18 +1,19 @@
 import React, { FC } from "react";
 import { Heading } from "../ui/typograhpy/Heading";
-import { css } from "linaria";
+import { css, cx } from "linaria";
 import { parse, theme } from "../../config/theme";
 import { itemInfo } from "../../lib/itemInfo";
 import { SkillsItem } from "./item";
 import { useInView } from "react-intersection-observer";
 import { Container } from "../ui/Container";
+import { spacerBottomL } from "../../lib/spacers";
 
 export const Skills: FC = () => {
   const [viewRef, inView] = useInView({ triggerOnce: true });
   return (
     <Container
       id="skills"
-      className={container}
+      className={cx(container, spacerBottomL)}
       data-in-view={inView ? "" : null}
     >
       <div className={parent} ref={viewRef}>
@@ -49,16 +50,9 @@ export const Skills: FC = () => {
   );
 };
 
-const container = parse(
-  {
-    width: "100%",
-    pb: "64",
-  },
-  css`
-    @media screen and (min-width: ${theme.breakpoints.large}) {
-    }
-  `
-);
+const container = parse({
+  width: "100%",
+});
 
 const parent = parse(
   {

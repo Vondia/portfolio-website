@@ -1,13 +1,13 @@
 import React, { FC, useEffect, useState } from "react";
-import { css } from "linaria";
+import { css, cx } from "linaria";
 import { parse, theme } from "../../config/theme";
-import { Text } from "../ui/typograhpy/Text";
 import { Heading } from "../ui/typograhpy/Heading";
 import { ProjectItem } from "./ProjectItem";
 import { projectsInformation } from "../../lib/projects";
 import { Container } from "../ui/Container";
 import { useRouter } from "next/router";
 import { AnimationVariant } from "../../pages/_app";
+import { spacerBottomL } from "../../lib/spacers";
 
 type ProjectsProps = {};
 
@@ -24,7 +24,7 @@ export const Projects: FC<ProjectsProps> = () => {
   const leftColumn = projectsInformation.filter((_, key) => key % 2 === 0);
   const rightColumn = projectsInformation.filter((_, key) => key % 2 !== 0);
   return (
-    <Container id="projects" className={parent}>
+    <Container id="projects" className={cx(parent, spacerBottomL)}>
       <div className={container}>
         <Heading variant="h3" className={title}>
           What I&apos;ve worked on
@@ -89,7 +89,7 @@ const container = parse(
   {
     mx: "auto",
     px: "8",
-    py: "64",
+    pt: "64",
   },
   css`
     max-width: 1240px;
@@ -154,7 +154,7 @@ const left = parse(
 const right = parse(
   {
     display: "none",
-    py: "48",
+    pt: "48",
   },
   css`
     @media screen and (min-width: ${theme.breakpoints.medium}) {

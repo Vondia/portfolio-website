@@ -43,9 +43,9 @@ export const grid = parse(
     display: "grid",
   },
   css`
+    grid-gap: 2rem;
     @media screen and (min-width: ${theme.breakpoints.large}) {
       grid-template-columns: 2fr 3fr;
-      grid-gap: 2rem;
     }
   `
 );
@@ -231,7 +231,7 @@ export const moveToTopContainer = parse(
   {
     display: "flex",
     justifyContent: "center",
-    py: "64",
+    pt: "64",
   },
   css``
 );

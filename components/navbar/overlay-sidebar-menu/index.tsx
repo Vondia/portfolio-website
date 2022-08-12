@@ -47,108 +47,90 @@ export const OverlaySidebarMenu: FC<OverlaySidebarMenuProps> = () => {
         <Dialog.Content className={styles.sidebar}>
           <aside className={styles.grid}>
             <div className={styles.menu}>
-              <div>
-                <div className={styles.topOverlay}>
-                  <div>
-                    <Dialog.Close asChild>
-                      <button className={styles.closeButton}>
-                        <AiOutlineClose />
-                      </button>
-                    </Dialog.Close>
-                  </div>
-                </div>
-                <div className={styles.overlayTitle}>
-                  <Text
-                    as="p"
-                    variant="large"
-                    className={styles.overlayTitleText}
-                  >
-                    {" "}
-                    Welcome to my portfolio site
-                  </Text>
-                </div>
-                <div className={styles.parentListItemOverlay}>
-                  <ul>
-                    <Link href="/">
-                      <a onClick={() => setIsOpen(false)}>
-                        <Text
-                          variant="small"
-                          className={styles.listItemOverlay}
-                        >
-                          Home
-                        </Text>
-                      </a>
-                    </Link>
-                    <Link href="/#projects">
-                      <a onClick={() => setIsOpen(false)}>
-                        <Text
-                          variant="small"
-                          className={styles.listItemOverlay}
-                        >
-                          Projects
-                        </Text>
-                      </a>
-                    </Link>
-                    <Link href="/#skills">
-                      <a onClick={() => setIsOpen(false)}>
-                        <Text
-                          variant="small"
-                          className={styles.listItemOverlay}
-                        >
-                          Skills
-                        </Text>
-                      </a>
-                    </Link>
-                    <Link href="/#about">
-                      <a onClick={() => setIsOpen(false)}>
-                        <Text
-                          variant="small"
-                          className={styles.listItemOverlay}
-                        >
-                          About
-                        </Text>
-                      </a>
-                    </Link>
-                    <Link href="/#contact">
-                      <a onClick={() => setIsOpen(false)}>
-                        <Text
-                          variant="small"
-                          className={styles.listItemOverlay}
-                        >
-                          Contact
-                        </Text>
-                      </a>
-                    </Link>
-                  </ul>
-                  <div className={styles.footerOverlay}>
-                    <Text variant="large" fontWeight="medium">
-                      Let&apos;s connect
-                    </Text>
-                    <div className={styles.socialMediaButtons}>
-                      <a
-                        href="https://www.linkedin.com/in/pim-van-den-bosch/"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        <button className={styles.socialMediaButton}>
-                          <FaLinkedinIn />
-                        </button>
-                      </a>
-
-                      <a
-                        href="https://github.com/vondia"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        <button className={styles.socialMediaButton}>
-                          <FaGithub />
-                        </button>
-                      </a>
-                    </div>
-                  </div>
+              <div className={styles.topOverlay}>
+                <div>
+                  <Dialog.Close asChild>
+                    <button className={styles.closeButton}>
+                      <AiOutlineClose />
+                    </button>
+                  </Dialog.Close>
                 </div>
               </div>
-              <div></div>
+              <div className={styles.overlayTitle}>
+                <Text
+                  as="p"
+                  variant="large"
+                  className={styles.overlayTitleText}
+                >
+                  {" "}
+                  Welcome to my portfolio site
+                </Text>
+              </div>
+              <div className={styles.parentListItemOverlay}>
+                <ul>
+                  <Link href="/">
+                    <a onClick={() => setIsOpen(false)}>
+                      <Text variant="small" className={styles.listItemOverlay}>
+                        Home
+                      </Text>
+                    </a>
+                  </Link>
+                  <Link href="/#projects">
+                    <a onClick={() => setIsOpen(false)}>
+                      <Text variant="small" className={styles.listItemOverlay}>
+                        Projects
+                      </Text>
+                    </a>
+                  </Link>
+                  <Link href="/#skills">
+                    <a onClick={() => setIsOpen(false)}>
+                      <Text variant="small" className={styles.listItemOverlay}>
+                        Skills
+                      </Text>
+                    </a>
+                  </Link>
+                  <Link href="/#about">
+                    <a onClick={() => setIsOpen(false)}>
+                      <Text variant="small" className={styles.listItemOverlay}>
+                        About
+                      </Text>
+                    </a>
+                  </Link>
+                  <Link href="/#contact">
+                    <a onClick={() => setIsOpen(false)}>
+                      <Text variant="small" className={styles.listItemOverlay}>
+                        Contact
+                      </Text>
+                    </a>
+                  </Link>
+                </ul>
+              </div>
+              <div className={styles.footerOverlay}>
+                <Text variant="large" fontWeight="medium">
+                  Let&apos;s connect
+                </Text>
+                <div className={styles.socialMediaButtons}>
+                  <a
+                    href="https://www.linkedin.com/in/pim-van-den-bosch/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <button className={styles.socialMediaButton}>
+                      <FaLinkedinIn />
+                    </button>
+                  </a>
+
+                  <a
+                    href="https://github.com/vondia"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <button className={styles.socialMediaButton}>
+                      <FaGithub />
+                    </button>
+                  </a>
+                </div>
+              </div>
             </div>
           </aside>
         </Dialog.Content>

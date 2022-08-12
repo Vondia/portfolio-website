@@ -110,7 +110,6 @@ export const grid = parse(
   },
   css`
     grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
     transition-property: width;
     transition-duration: 0.2s;
   `
@@ -118,12 +117,13 @@ export const grid = parse(
 
 export const menu = parse(
   {
-    display: "block",
+    display: "flex",
     width: "100%",
-    p: "12",
+    p: "16",
   },
   css`
     height: 100%;
+    flex-direction: column;
 
     [data-item-title] {
       flex-shrink: 0;
@@ -166,7 +166,7 @@ export const closeButton = parse(
 export const socialMediaButton = parse(
   {
     p: "12",
-    mr: "48",
+    mr: "20",
     display: "flex",
   },
   css`
@@ -199,7 +199,7 @@ export const socialMediaButtons = parse(
 
 export const overlayTitle = parse(
   {
-    my: "16",
+    mt: "16",
   },
   css`
     border-bottom: 1px solid ${theme.colors.shade300};
@@ -233,8 +233,12 @@ export const parentListItemOverlay = parse(
 );
 
 export const footerOverlay = css`
-  padding-top: 10rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: ${theme.colors.blue};
+  margin-top: auto;
+
+  @media screen and (min-width: ${theme.breakpoints.small}) {
+    margin-top: 3rem;
+  }
 `;

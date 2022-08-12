@@ -167,6 +167,7 @@ export const socialMediaButton = parse(
   {
     p: "12",
     mr: "48",
+    display: "flex",
   },
   css`
     border-radius: 9999px;

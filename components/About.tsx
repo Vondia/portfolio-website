@@ -271,7 +271,7 @@ export const About: FC = () => {
                 <strong className={styles.bionicReading}>th</strong>e{" "}
                 <strong className={styles.bionicReading}>probl</strong>em.{" "}
                 <strong className={styles.bionicReading}>Whi</strong>ch{" "}
-                <strong className={styles.bionicReading}>sometime</strong>es{" "}
+                <strong className={styles.bionicReading}>somet</strong>imes{" "}
                 <strong className={styles.bionicReading}>wa</strong>s{" "}
                 <strong className={styles.bionicReading}>th</strong>e{" "}
                 <strong className={styles.bionicReading}>cas</strong>e{" "}
@@ -372,7 +372,7 @@ export const About: FC = () => {
                 <strong className={styles.bionicReading}>graduati</strong>ng I{" "}
                 <strong className={styles.bionicReading}>ha</strong>d{" "}
                 <strong className={styles.bionicReading}>tal</strong>ks{" "}
-                <strong className={styles.bionicReading}>wit</strong>h a
+                <strong className={styles.bionicReading}>wit</strong>h a{" "}
                 <strong className={styles.bionicReading}>lo</strong>t{" "}
                 <strong className={styles.bionicReading}>o</strong>f{" "}
                 <strong className={styles.bionicReading}>compani</strong>es{" "}
@@ -591,7 +591,7 @@ export const About: FC = () => {
                 <strong className={styles.bionicReading}>medi</strong>um/
                 <strong className={styles.bionicReading}>bi</strong>g{" "}
                 <strong className={styles.bionicReading}>siz</strong>ed{" "}
-                <strong className={styles.bionicReading}>digit</strong>al
+                <strong className={styles.bionicReading}>digit</strong>al{" "}
                 <strong className={styles.bionicReading}>agen</strong>cy?{" "}
                 <strong className={styles.bionicReading}>An</strong>d{" "}
                 <strong className={styles.bionicReading}>looki</strong>ng{" "}
@@ -601,7 +601,7 @@ export const About: FC = () => {
                 <strong className={styles.bionicReading}>juni</strong>or{" "}
                 <strong className={styles.bionicReading}>fro</strong>nt-
                 <strong className={styles.bionicReading}>end</strong>er?{" "}
-                <strong className={styles.bionicReading}>Don&apos;</strong>t
+                <strong className={styles.bionicReading}>Don&apos;</strong>t{" "}
                 <strong className={styles.bionicReading}>hesita</strong>te{" "}
                 <strong className={styles.bionicReading}>an</strong>d{" "}
                 <strong className={styles.bionicReading}>conta</strong>ct{" "}

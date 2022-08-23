@@ -31,7 +31,7 @@ export const Main: FC = () => {
           <Text className={styles.bottomText} variant="large" color="shade600">
             I&apos;m a front-end web developer who loves bringing beautiful
             designs to life. Currently I&apos;m focused on building responsive
-            front-end web applications while continueing to improve my skills.
+            front-end web applications while continuing to improve my skills.
           </Text>
           <div className={styles.buttonContainer}>
             <a

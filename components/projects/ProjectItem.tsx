@@ -30,7 +30,7 @@ export const ProjectItem: FC<ProjectItemProps> = ({
   return (
     <div
       className={parent}
-      id={title}
+      id={title.replace(/\s/g, "_") + "_project"}
       data-in-view={inView ? "" : null}
       data-on-first-render={inView && !visitedHomePageOnce ? "" : null}
       data-animation-variant={animation}

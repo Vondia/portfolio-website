@@ -70,24 +70,26 @@ export const Contact: FC<ContactProps> = () => {
               </div>
               <div>
                 <div className={styles.icons}>
-                  <a
-                    href="https://www.linkedin.com/in/pim-van-den-bosch/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <button className={styles.button}>
+                  <button>
+                    <a
+                      href="https://www.linkedin.com/in/pim-van-den-bosch/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      className={styles.button}
+                    >
                       <FaLinkedinIn />
-                    </button>
-                  </a>
-                  <a
-                    href="https://github.com/vondia"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <button className={styles.button}>
+                    </a>
+                  </button>
+                  <button>
+                    <a
+                      href="https://github.com/vondia"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      className={styles.button}
+                    >
                       <FaGithub />
-                    </button>
-                  </a>
+                    </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -115,7 +117,7 @@ export const Contact: FC<ContactProps> = () => {
                   <div className={styles.formLine}>
                     <Input
                       name="phone"
-                      type="phone"
+                      type="tel"
                       value={phone}
                       label="Phone number"
                       onChange={(e) => setPhone(e.target.value)}

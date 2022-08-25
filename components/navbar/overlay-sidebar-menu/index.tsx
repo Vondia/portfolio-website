@@ -68,41 +68,66 @@ export const OverlaySidebarMenu: FC<OverlaySidebarMenuProps> = () => {
               </div>
               <div className={styles.parentListItemOverlay}>
                 <ul>
-                  <Link href="/">
-                    <a onClick={() => setIsOpen(false)}>
-                      <Text variant="small" className={styles.listItemOverlay}>
-                        Home
-                      </Text>
-                    </a>
-                  </Link>
-                  <Link href="/#projects">
-                    <a onClick={() => setIsOpen(false)}>
-                      <Text variant="small" className={styles.listItemOverlay}>
-                        Projects
-                      </Text>
-                    </a>
-                  </Link>
-                  <Link href="/#skills">
-                    <a onClick={() => setIsOpen(false)}>
-                      <Text variant="small" className={styles.listItemOverlay}>
-                        Skills
-                      </Text>
-                    </a>
-                  </Link>
-                  <Link href="/#about">
-                    <a onClick={() => setIsOpen(false)}>
-                      <Text variant="small" className={styles.listItemOverlay}>
-                        About
-                      </Text>
-                    </a>
-                  </Link>
-                  <Link href="/#contact">
-                    <a onClick={() => setIsOpen(false)}>
-                      <Text variant="small" className={styles.listItemOverlay}>
-                        Contact
-                      </Text>
-                    </a>
-                  </Link>
+                  <li>
+                    <Link href="/">
+                      <a onClick={() => setIsOpen(false)}>
+                        <Text
+                          variant="small"
+                          className={styles.listItemOverlay}
+                        >
+                          Home
+                        </Text>
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/#projects">
+                      <a onClick={() => setIsOpen(false)}>
+                        <Text
+                          variant="small"
+                          className={styles.listItemOverlay}
+                        >
+                          Projects
+                        </Text>
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/#skills">
+                      <a onClick={() => setIsOpen(false)}>
+                        <Text
+                          variant="small"
+                          className={styles.listItemOverlay}
+                        >
+                          Skills
+                        </Text>
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/#about">
+                      <a onClick={() => setIsOpen(false)}>
+                        <Text
+                          variant="small"
+                          className={styles.listItemOverlay}
+                        >
+                          About
+                        </Text>
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/#contact">
+                      <a onClick={() => setIsOpen(false)}>
+                        <Text
+                          variant="small"
+                          className={styles.listItemOverlay}
+                        >
+                          Contact
+                        </Text>
+                      </a>
+                    </Link>
+                  </li>
                 </ul>
               </div>
               <div className={styles.footerOverlay}>

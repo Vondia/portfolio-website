@@ -50,66 +50,76 @@ export const Navbar: FC<NavbarProps> = ({ animationVariant }) => {
       <div className={shadow ? styles.container : styles.containerShadowless}>
         <div>
           <ul style={{ color: `${linkColor}` }} className={styles.hideOnMobile}>
-            <Link href="/">
-              <a>
-                <Text
-                  variant="small"
-                  data-hover-color={linkColor === "#fcf5ef" ? "" : null}
-                  className={styles.listItem}
-                >
-                  {" "}
-                  Home
-                </Text>
-              </a>
-            </Link>
-            <Link href="/#projects">
-              <a>
-                <Text
-                  variant="small"
-                  data-hover-color={linkColor === "#fcf5ef" ? "" : null}
-                  className={styles.listItem}
-                >
-                  {" "}
-                  Projects
-                </Text>
-              </a>
-            </Link>
-            <Link href="/#skills">
-              <a>
-                <Text
-                  variant="small"
-                  data-hover-color={linkColor === "#fcf5ef" ? "" : null}
-                  className={styles.listItem}
-                >
-                  {" "}
-                  Skills
-                </Text>
-              </a>
-            </Link>
-            <Link href="/#about">
-              <a>
-                <Text
-                  variant="small"
-                  data-hover-color={linkColor === "#fcf5ef" ? "" : null}
-                  className={styles.listItem}
-                >
-                  {" "}
-                  About
-                </Text>
-              </a>
-            </Link>
-            <Link href="/#contact">
-              <a>
-                <Text
-                  variant="small"
-                  data-hover-color={linkColor === "#fcf5ef" ? "" : null}
-                  className={styles.listItem}
-                >
-                  {" "}
-                  Contact
-                </Text>
-              </a>
-            </Link>
+            <li>
+              <Link href="/">
+                <a>
+                  <Text
+                    variant="small"
+                    data-hover-color={linkColor === "#fcf5ef" ? "" : null}
+                    className={styles.listItem}
+                  >
+                    {" "}
+                    Home
+                  </Text>
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/#projects">
+                <a>
+                  <Text
+                    variant="small"
+                    data-hover-color={linkColor === "#fcf5ef" ? "" : null}
+                    className={styles.listItem}
+                  >
+                    {" "}
+                    Projects
+                  </Text>
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/#skills">
+                <a>
+                  <Text
+                    variant="small"
+                    data-hover-color={linkColor === "#fcf5ef" ? "" : null}
+                    className={styles.listItem}
+                  >
+                    {" "}
+                    Skills
+                  </Text>
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/#about">
+                <a>
+                  <Text
+                    variant="small"
+                    data-hover-color={linkColor === "#fcf5ef" ? "" : null}
+                    className={styles.listItem}
+                  >
+                    {" "}
+                    About
+                  </Text>
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/#contact">
+                <a>
+                  <Text
+                    variant="small"
+                    data-hover-color={linkColor === "#fcf5ef" ? "" : null}
+                    className={styles.listItem}
+                  >
+                    {" "}
+                    Contact
+                  </Text>
+                </a>
+              </Link>
+            </li>
           </ul>
           <OverlaySidebarMenu />
         </div>

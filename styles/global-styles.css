@@ -4,33 +4,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-:root {
-  --reach-menu-button: 1;
-  --reach-dialog: 1;
-}
-
-[data-reach-dialog-overlay] {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 20;
-}
-
-[data-reach-dialog-content] {
-  overflow: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: hsla(0, 0%, 0%, 0.2);
-  display: flex;
-  align-items: flex-start;
-  outline: 0;
-}
-
 body,
 html {
   background-color: #fcf5ef;

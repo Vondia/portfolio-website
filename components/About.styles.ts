@@ -162,6 +162,7 @@ export const bionicReadingDiv = css`
   display: flex;
   align-items: center;
   width: 150px;
+  gap: 0.25rem;
 
   @media screen and (min-width: ${theme.breakpoints.small}) {
     width: unset;

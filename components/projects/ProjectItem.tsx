@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { css } from "linaria";
+import { css, cx } from "linaria";
 import { parse, theme } from "../../config/theme";
 import { Text } from "../ui/typograhpy/Text";
 import { Heading } from "../ui/typograhpy/Heading";
@@ -43,8 +43,8 @@ export const ProjectItem: FC<ProjectItemProps> = ({
           {title}
         </Heading>
       </div>
-      <div className={text}>
-        <Text variant="regular" color="shade400" mb="24">
+      <div className={cx(text, textPB)}>
+        <Text variant="regular" color="shade400">
           &quot;{subTitle}&quot;
         </Text>
       </div>
@@ -178,9 +178,10 @@ const button = parse(
   `
 );
 
-const text = parse(
-  {
-    textAlign: "center",
-  },
-  css``
-);
+const text = parse({
+  textAlign: "center",
+});
+
+const textPB = parse({
+  pb: "24",
+});

@@ -24,7 +24,7 @@ export const About: FC = () => {
               </Heading>
             </div>
             <div className={styles.bionicReadingDiv}>
-              <Text variant="small" color="shade600" mr="4">
+              <Text variant="small" color="shade600">
                 <a
                   href="https://www.howtogeek.com/807981/what-is-bionic-reading-and-how-do-you-use-it/"
                   target="_blank"

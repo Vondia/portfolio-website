@@ -12,14 +12,14 @@ export const Main: FC = () => {
         <div>
           <Heading variant="h1" color="shade700" className={styles.headingText}>
             Hi, I&apos;m{" "}
-            <span className={styles.pimText}>
+            <div className={styles.pimText}>
               <Heading variant="h1" as="h2" color="blue">
                 Pim
               </Heading>
               <Heading variant="h1" as="h2" color="blue">
                 Pim
               </Heading>
-            </span>
+            </div>
           </Heading>
           <Heading
             variant="h1"
@@ -34,27 +34,23 @@ export const Main: FC = () => {
             front-end web applications while continuing to improve my skills.
           </Text>
           <div className={styles.buttonContainer}>
-            <button>
-              <a
-                href="https://www.linkedin.com/in/pim-van-den-bosch/"
-                rel="noopener noreferrer"
-                target="_blank"
-                className={styles.button}
-              >
-                <FaLinkedinIn />
-              </a>
-            </button>
+            <a
+              href="https://www.linkedin.com/in/pim-van-den-bosch/"
+              rel="noopener noreferrer"
+              target="_blank"
+              className={styles.button}
+            >
+              <FaLinkedinIn />
+            </a>
 
-            <button>
-              <a
-                href="https://github.com/vondia"
-                rel="noopener noreferrer"
-                target="_blank"
-                className={styles.button}
-              >
-                <FaGithub />
-              </a>
-            </button>
+            <a
+              href="https://github.com/vondia"
+              rel="noopener noreferrer"
+              target="_blank"
+              className={styles.button}
+            >
+              <FaGithub />
+            </a>
           </div>
         </div>
       </div>

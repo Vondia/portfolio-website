@@ -78,26 +78,22 @@ export const Contact: FC<ContactProps> = () => {
               </div>
               <div>
                 <div className={styles.icons}>
-                  <button>
-                    <a
-                      href="https://www.linkedin.com/in/pim-van-den-bosch/"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      className={styles.button}
-                    >
-                      <FaLinkedinIn />
-                    </a>
-                  </button>
-                  <button>
-                    <a
-                      href="https://github.com/vondia"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      className={styles.button}
-                    >
-                      <FaGithub />
-                    </a>
-                  </button>
+                  <a
+                    href="https://www.linkedin.com/in/pim-van-den-bosch/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    className={styles.button}
+                  >
+                    <FaLinkedinIn />
+                  </a>
+                  <a
+                    href="https://github.com/vondia"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    className={styles.button}
+                  >
+                    <FaGithub />
+                  </a>
                 </div>
               </div>
             </div>

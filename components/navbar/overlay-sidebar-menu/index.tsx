@@ -139,20 +139,18 @@ export const OverlaySidebarMenu: FC<OverlaySidebarMenuProps> = () => {
                     href="https://www.linkedin.com/in/pim-van-den-bosch/"
                     rel="noopener noreferrer"
                     target="_blank"
+                    className={styles.socialMediaButton}
                   >
-                    <button className={styles.socialMediaButton}>
-                      <FaLinkedinIn />
-                    </button>
+                    <FaLinkedinIn />
                   </a>
 
                   <a
                     href="https://github.com/vondia"
                     rel="noopener noreferrer"
                     target="_blank"
+                    className={styles.socialMediaButton}
                   >
-                    <button className={styles.socialMediaButton}>
-                      <FaGithub />
-                    </button>
+                    <FaGithub />
                   </a>
                 </div>
               </div>

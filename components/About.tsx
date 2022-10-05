@@ -104,23 +104,10 @@ export const About: FC = () => {
                 consideration I knew what I DID want. I went out to search for a
                 Digital Agency because I wanted to be a web/app developer. This
                 is when I came across and joined Reversed Digital, a small
-                Digital Agency located in Utrecht. I&apos;ve been working here
-                for over a year now and I&apos;ve learned so very much. However
-                I did find that in order to make that next step, the best thing
-                for me would be to join a bigger digital agency. The reason for
-                this is that in this stage of my career I feel it would benefit
-                me to get a bit more guidance. Are you (a part off) a medium/big
-                sized digital agency? And looking for an eager junior
-                front-ender? Don&apos;t hesitate and contact me bellow or via{" "}
-                <a
-                  href="https://www.linkedin.com/in/pim-van-den-bosch/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className={styles.bionicLink}
-                >
-                  linkedIn
-                </a>
-                !
+                Digital Agency located in Utrecht. I&apos;ve worked there for
+                well over a year and learned/improved a lot. After which I moved
+                on to Incentro a bigger company to help me grow even more. I
+                started working there November first 2022.
               </Text>
             </div>
           ) : (
@@ -605,106 +592,41 @@ export const About: FC = () => {
                 <strong className={styles.bionicReading}>i</strong>n{" "}
                 <strong className={styles.bionicReading}>Utre</strong>cht.{" "}
                 <strong className={styles.bionicReading}>I</strong>&apos;ve{" "}
-                <strong className={styles.bionicReading}>be</strong>en{" "}
-                <strong className={styles.bionicReading}>work</strong>ing{" "}
-                <strong className={styles.bionicReading}>he</strong>re{" "}
+                <strong className={styles.bionicReading}>wor</strong>ked{" "}
+                <strong className={styles.bionicReading}>the</strong>re{" "}
                 <strong className={styles.bionicReading}>f</strong>or{" "}
+                <strong className={styles.bionicReading}>we</strong>ll{" "}
                 <strong className={styles.bionicReading}>ov</strong>er{" "}
                 <strong className={styles.bionicReading}>a</strong>{" "}
                 <strong className={styles.bionicReading}>ye</strong>ar{" "}
-                <strong className={styles.bionicReading}>n</strong>ow{" "}
                 <strong className={styles.bionicReading}>a</strong>nd{" "}
                 <strong className={styles.bionicReading}>I</strong>&apos;ve{" "}
-                <strong className={styles.bionicReading}>lear</strong>ned{" "}
-                <strong className={styles.bionicReading}>s</strong>o{" "}
-                <strong className={styles.bionicReading}>ve</strong>ry{" "}
-                <strong className={styles.bionicReading}>mu</strong>ch.{" "}
-                <strong className={styles.bionicReading}>Howe</strong>ver{" "}
+                <strong className={styles.bionicReading}>lear</strong>ned/{" "}
+                <strong className={styles.bionicReading}>impr</strong>oved{" "}
+                <strong className={styles.bionicReading}>a</strong>{" "}
+                <strong className={styles.bionicReading}>l</strong>ot.{" "}
+                <strong className={styles.bionicReading}>Aft</strong>er{" "}
+                <strong className={styles.bionicReading}>whi</strong>ch{" "}
                 <strong className={styles.bionicReading}>I</strong>{" "}
-                <strong className={styles.bionicReading}>d</strong>id{" "}
-                <strong className={styles.bionicReading}>fi</strong>nd{" "}
-                <strong className={styles.bionicReading}>th</strong>at{" "}
-                <strong className={styles.bionicReading}>i</strong>n{" "}
-                <strong className={styles.bionicReading}>ord</strong>er{" "}
+                <strong className={styles.bionicReading}>mov</strong>ed{" "}
+                <strong className={styles.bionicReading}>o</strong>n{" "}
                 <strong className={styles.bionicReading}>t</strong>o{" "}
-                <strong className={styles.bionicReading}>ma</strong>ke{" "}
-                <strong className={styles.bionicReading}>th</strong>at{" "}
-                <strong className={styles.bionicReading}>nex</strong>t{" "}
-                <strong className={styles.bionicReading}>st</strong>ep,{" "}
-                <strong className={styles.bionicReading}>t</strong>he{" "}
-                <strong className={styles.bionicReading}>be</strong>st{" "}
-                <strong className={styles.bionicReading}>th</strong>ing{" "}
-                <strong className={styles.bionicReading}>f</strong>or{" "}
-                <strong className={styles.bionicReading}>m</strong>e{" "}
-                <strong className={styles.bionicReading}>wou</strong>ld{" "}
-                <strong className={styles.bionicReading}>b</strong>e{" "}
-                <strong className={styles.bionicReading}>t</strong>o{" "}
-                <strong className={styles.bionicReading}>jo</strong>in{" "}
+                <strong className={styles.bionicReading}>Ince</strong>ntro{" "}
                 <strong className={styles.bionicReading}>a</strong>{" "}
                 <strong className={styles.bionicReading}>big</strong>ger{" "}
-                <strong className={styles.bionicReading}>digi</strong>tal{" "}
-                <strong className={styles.bionicReading}>age</strong>ncy.{" "}
-                <strong className={styles.bionicReading}>T</strong>he{" "}
-                <strong className={styles.bionicReading}>rea</strong>son{" "}
-                <strong className={styles.bionicReading}>f</strong>or{" "}
-                <strong className={styles.bionicReading}>th</strong>is{" "}
-                <strong className={styles.bionicReading}>i</strong>s{" "}
-                <strong className={styles.bionicReading}>th</strong>at{" "}
-                <strong className={styles.bionicReading}>i</strong>n{" "}
-                <strong className={styles.bionicReading}>th</strong>is{" "}
-                <strong className={styles.bionicReading}>sta</strong>ge{" "}
-                <strong className={styles.bionicReading}>o</strong>f{" "}
-                <strong className={styles.bionicReading}>m</strong>y{" "}
-                <strong className={styles.bionicReading}>car</strong>eer{" "}
-                <strong className={styles.bionicReading}>I</strong>{" "}
-                <strong className={styles.bionicReading}>fe</strong>el{" "}
-                <strong className={styles.bionicReading}>i</strong>t{" "}
-                <strong className={styles.bionicReading}>wou</strong>ld{" "}
-                <strong className={styles.bionicReading}>benef</strong>it{" "}
-                <strong className={styles.bionicReading}>m</strong>e{" "}
+                <strong className={styles.bionicReading}>comp</strong>any{" "}
                 <strong className={styles.bionicReading}>t</strong>o{" "}
-                <strong className={styles.bionicReading}>g</strong>et{" "}
-                <strong className={styles.bionicReading}>a</strong>{" "}
-                <strong className={styles.bionicReading}>b</strong>it{" "}
-                <strong className={styles.bionicReading}>mo</strong>re{" "}
-                <strong className={styles.bionicReading}>guid</strong>ance.{" "}
-                <strong className={styles.bionicReading}>A</strong>re{" "}
-                <strong className={styles.bionicReading}>y</strong>ou ({" "}
-                <strong className={styles.bionicReading}>a</strong>{" "}
-                <strong className={styles.bionicReading}>pa</strong>rt{" "}
-                <strong className={styles.bionicReading}>o</strong>ff){" "}
-                <strong className={styles.bionicReading}>a</strong>{" "}
-                <strong className={styles.bionicReading}>med</strong>ium
-                <strong className={styles.bionicReading}>/b</strong>ig{" "}
-                <strong className={styles.bionicReading}>siz</strong>ed{" "}
-                <strong className={styles.bionicReading}>digi</strong>tal{" "}
-                <strong className={styles.bionicReading}>age</strong>ncy?{" "}
-                <strong className={styles.bionicReading}>A</strong>nd{" "}
-                <strong className={styles.bionicReading}>look</strong>ing{" "}
-                <strong className={styles.bionicReading}>f</strong>or{" "}
-                <strong className={styles.bionicReading}>a</strong>n{" "}
-                <strong className={styles.bionicReading}>eag</strong>er{" "}
-                <strong className={styles.bionicReading}>jun</strong>ior{" "}
-                <strong className={styles.bionicReading}>fro</strong>nt-
-                <strong className={styles.bionicReading}>end</strong>er?{" "}
-                <strong className={styles.bionicReading}>D</strong>o
-                <strong className={styles.bionicReading}>n</strong>&apos;t{" "}
-                <strong className={styles.bionicReading}>hesi</strong>tate{" "}
-                <strong className={styles.bionicReading}>a</strong>nd{" "}
-                <strong className={styles.bionicReading}>cont</strong>act{" "}
+                <strong className={styles.bionicReading}>he</strong>lp{" "}
                 <strong className={styles.bionicReading}>m</strong>e{" "}
-                <strong className={styles.bionicReading}>bel</strong>low{" "}
-                <strong className={styles.bionicReading}>o</strong>r{" "}
-                <strong className={styles.bionicReading}>v</strong>ia{" "}
-                <a
-                  href="https://www.linkedin.com/in/pim-van-den-bosch/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className={styles.bionicLink}
-                >
-                  <strong className={styles.bionicReading}>link</strong>edIn
-                </a>
-                .
+                <strong className={styles.bionicReading}>gr</strong>ow{" "}
+                <strong className={styles.bionicReading}>ev</strong>en{" "}
+                <strong className={styles.bionicReading}>mo</strong>re.{" "}
+                <strong className={styles.bionicReading}>I</strong>{" "}
+                <strong className={styles.bionicReading}>star</strong>ted{" "}
+                <strong className={styles.bionicReading}>work</strong>ing{" "}
+                <strong className={styles.bionicReading}>the</strong>re{" "}
+                <strong className={styles.bionicReading}>Nove</strong>mber{" "}
+                <strong className={styles.bionicReading}>fir</strong>st 2022.{" "}
               </Text>
             </div>
           )}

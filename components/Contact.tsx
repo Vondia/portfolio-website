@@ -63,9 +63,17 @@ export const Contact: FC<ContactProps> = () => {
                   >
                     Reversed Digital
                   </a>
-                  . I discovered here that I love the work at a digital agency
-                  but at this point of my career a bigger agency would help me
-                  develop quicker.
+                  . But at the end of this month I will be starting a new job at{" "}
+                  <a
+                    href="https://www.incentro.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.link}
+                  >
+                    Incentro
+                  </a>
+                  . Really looking forward to it. And I&apos;ll keep you posted
+                  on my work there.
                 </Text>
               </div>
               <div>

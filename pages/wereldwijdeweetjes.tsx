@@ -8,6 +8,9 @@ import { Heading } from "../components/ui/typograhpy/Heading";
 import { Text } from "../components/ui/typograhpy/Text";
 import { RiRadioButtonFill } from "react-icons/ri";
 import { Container } from "../components/ui/Container";
+import Link from "next/link";
+import { IoIosArrowForward } from "react-icons/io";
+import { TbArrowUpRight } from "react-icons/tb";
 
 const WereldwijdeWeetjes: NextPage = () => {
   return (
@@ -29,30 +32,23 @@ const WereldwijdeWeetjes: NextPage = () => {
             Wereldwijde Weetjes
           </Heading>
           <Text variant="large">
-            <a
-              href="https://www.wereldwijdeweetjes.nl/"
-              target="_blank"
-              rel="noreferrer"
-              className={link}
-            >
-              Wereldwijde Weetjes
-            </a>{" "}
-            is my portfolio project at the end of Codaisseur. It was an idea I
-            had while talking to my mother, she&apos;s a primary school teacher.
-            And she noticed she had a &apos;dead&apos; period right before
-            breaks. Where the kids would be finished with their work but there
-            wouldn&apos;t be enough time to start a new subject. And since she
-            loves to travel herself she thought it would be cool to teach the
-            children something about the world. And then more specifically a
-            place she visited in one of her holidays. She is great with Prezi
-            but she wanted a platform she could open, which contained all her
-            Prezi&apos;s. And therefor she could easily open on her board and
-            share an adventure with the class. The challenge for me was to build
-            this and keep it as simple as possible becuase she&apos;s not a
-            super technical person. So she would have to be able to log in, to
-            some sort of admin environment where she could easilly add new
-            Prezi&apos;s and add a question about that Prezi to test the class
-            at the end of they paid attention.
+            Wereldwijde Weetjes was my portfolio project at the end of
+            Codaisseur. It was an idea I had while talking to my mother,
+            she&apos;s a primary school teacher. And she noticed she had a
+            &apos;dead&apos; period right before breaks. Where the kids would be
+            finished with their work but there wouldn&apos;t be enough time to
+            start a new subject. And since she loves to travel herself she
+            thought it would be cool to teach the children something about the
+            world. And then more specifically a place she visited in one of her
+            holidays. She is great with Prezi but she wanted a platform she
+            could open, which contained all her Prezi&apos;s. And therefor she
+            could easily open on her board and share an adventure with the
+            class. The challenge for me was to build this and keep it as simple
+            as possible becuase she&apos;s not a super technical person. So she
+            would have to be able to log in, to some sort of admin environment
+            where she could easilly add new Prezi&apos;s and add a question
+            about that Prezi to test the class at the end of they paid
+            attention.
           </Text>
         </div>
         <div className={technologiesContainer}>
@@ -178,6 +174,28 @@ const WereldwijdeWeetjes: NextPage = () => {
               width="249px"
               height="85"
             />
+          </div>
+        </div>
+        <div className={buttons}>
+          <div className={internal}>
+            <Link href="/#projects">
+              <button type="button" className={buttonGlowOnHover}>
+                Go back
+                <IoIosArrowForward style={{ marginLeft: "8px" }} />
+              </button>
+            </Link>
+          </div>
+          <div className={external}>
+            <a
+              type="button"
+              target="_blank"
+              href="https://www.gassan.com/"
+              rel="noreferrer"
+              className={buttonGlowOnHover}
+            >
+              Visit project
+              <TbArrowUpRight style={{ marginLeft: "8px" }} />
+            </a>
           </div>
         </div>
       </Container>
@@ -408,46 +426,132 @@ const textBlockPlacement = parse({
   mb: "auto",
 });
 
-export const link = parse(
+const buttons = parse(
   {
-    position: "relative",
+    display: "flex",
+    width: "100%",
   },
   css`
-    font-style: italic;
-    background-image: linear-gradient(
-      to right,
-      #6a47ff,
-      #82a1f6 50%,
-      #454a54 50%
-    );
-    background-size: 200% 100%;
-    background-position: -100%;
-    display: inline-block;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 0.4s ease-in-out;
-
-    &:before {
-      content: "";
-      background-image: linear-gradient(to right, #6a47ff, #82a1f6);
-      display: block;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 1px;
-      transition: all 0.3s ease-in-out;
-    }
-
-    @media screen and (hover: hover) and (pointer: fine) {
-      &:hover {
-        background-position: 0;
-        &:before {
-          width: 100%;
-        }
-      }
-    }
+    gap: 1rem;
   `
 );
+
+const internal = css`
+  width: 100%;
+  @media screen and (hover: hover) and (pointer: fine) {
+    svg {
+      transition-property: transform;
+      transition-duration: 0.25s;
+    }
+
+    &:hover {
+      opacity: 0.9;
+      svg {
+        transform: translateX(0.25rem);
+      }
+    }
+  }
+`;
+
+const external = css`
+  width: 100%;
+  @media screen and (hover: hover) and (pointer: fine) {
+    svg {
+      transition-property: transform;
+      transition-duration: 0.25s;
+    }
+
+    &:hover {
+      opacity: 0.9;
+      svg {
+        transform: translate(0.2rem, -0.2rem);
+      }
+    }
+  }
+`;
+
+const buttonGlowOnHover = css`
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  color: ${theme.colors.white};
+  background: ${theme.colors.darkText};
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: ${theme.breakpoints.medium}) {
+    height: 50px;
+  }
+
+  &:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #0beef9,
+      #82a1f6,
+      #6a47ff,
+      #0beef9,
+      #82a1f6,
+      #6a47ff,
+      #0beef9,
+      #82a1f6,
+      #6a47ff
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(6px);
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+
+  &:active {
+    color: ${theme.colors.darkText};
+  }
+
+  &:active:after {
+    background: transparent;
+  }
+
+  &:hover:before {
+    opacity: 1;
+  }
+
+  &:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: ${theme.colors.darkText};
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+`;
 
 export default WereldwijdeWeetjes;

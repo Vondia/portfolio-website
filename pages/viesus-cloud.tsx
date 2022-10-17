@@ -145,7 +145,7 @@ const ViesusCloud: NextPage = () => {
   );
 };
 
-const container = parse({ width: "100%" });
+const container = parse({ width: "100%", mb: "16" });
 
 const parent = parse(
   {

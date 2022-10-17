@@ -8,6 +8,9 @@ import { Heading } from "../components/ui/typograhpy/Heading";
 import { Text } from "../components/ui/typograhpy/Text";
 import { RiRadioButtonFill } from "react-icons/ri";
 import { Container } from "../components/ui/Container";
+import Link from "next/link";
+import { IoIosArrowForward } from "react-icons/io";
+import { TbArrowUpRight } from "react-icons/tb";
 
 const ViesusCloud: NextPage = () => {
   return (
@@ -113,6 +116,28 @@ const ViesusCloud: NextPage = () => {
               width="249px"
               height="85"
             />
+          </div>
+        </div>
+        <div className={buttons}>
+          <div className={internal}>
+            <Link href="/#projects">
+              <button type="button" className={buttonGlowOnHover}>
+                Go back
+                <IoIosArrowForward style={{ marginLeft: "8px" }} />
+              </button>
+            </Link>
+          </div>
+          <div className={external}>
+            <a
+              type="button"
+              target="_blank"
+              href="https://www.viesus.cloud/"
+              rel="noreferrer"
+              className={buttonGlowOnHover}
+            >
+              Visit project
+              <TbArrowUpRight style={{ marginLeft: "8px" }} />
+            </a>
           </div>
         </div>
       </Container>
@@ -342,5 +367,133 @@ const bottomImage = parse(
 const textBlockPlacement = parse({
   mb: "auto",
 });
+
+const buttons = parse(
+  {
+    display: "flex",
+    width: "100%",
+  },
+  css`
+    gap: 1rem;
+  `
+);
+
+const internal = css`
+  width: 100%;
+  @media screen and (hover: hover) and (pointer: fine) {
+    svg {
+      transition-property: transform;
+      transition-duration: 0.25s;
+    }
+
+    &:hover {
+      opacity: 0.9;
+      svg {
+        transform: translateX(0.25rem);
+      }
+    }
+  }
+`;
+
+const external = css`
+  width: 100%;
+  @media screen and (hover: hover) and (pointer: fine) {
+    svg {
+      transition-property: transform;
+      transition-duration: 0.25s;
+    }
+
+    &:hover {
+      opacity: 0.9;
+      svg {
+        transform: translate(0.2rem, -0.2rem);
+      }
+    }
+  }
+`;
+
+const buttonGlowOnHover = css`
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  color: ${theme.colors.white};
+  background: ${theme.colors.darkText};
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: ${theme.breakpoints.medium}) {
+    height: 50px;
+  }
+
+  &:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #0beef9,
+      #82a1f6,
+      #6a47ff,
+      #0beef9,
+      #82a1f6,
+      #6a47ff,
+      #0beef9,
+      #82a1f6,
+      #6a47ff
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(6px);
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+
+  &:active {
+    color: ${theme.colors.darkText};
+  }
+
+  &:active:after {
+    background: transparent;
+  }
+
+  &:hover:before {
+    opacity: 1;
+  }
+
+  &:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: ${theme.colors.darkText};
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+`;
 
 export default ViesusCloud;

@@ -35,11 +35,11 @@ const ViesusCloud: NextPage = () => {
             website this was an awesome project. It had only just started when I
             joined the company so it was the first project I got to see from the
             ground up. I build a lot of the UI components that were later going
-            to be used throught he entire app. This was another great learning
-            moment for me to see how Reversed handles a new project and which
-            steps they take. Working in sprints and therefor having to deliver
-            what was agreed upon every two weeks was my first time
-            experiencingan agile scrum way of working.
+            to be used through the entire app. This was another great learning
+            experience for me to see how Reversed handles a new project and
+            which steps they take. Working in sprints and therefor having to
+            deliver what was agreed upon every two weeks was my first time
+            experiencing an agile scrum way of working.
           </Text>
         </div>
         <div className={technologiesContainer}>

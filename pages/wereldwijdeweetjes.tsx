@@ -9,197 +9,201 @@ import { Text } from "../components/ui/typograhpy/Text";
 import { RiRadioButtonFill } from "react-icons/ri";
 import { Container } from "../components/ui/Container";
 import Link from "next/link";
-import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack } from "react-icons/io";
 import { TbArrowUpRight } from "react-icons/tb";
+import { HeadSeo } from "../components/head";
 
 const WereldwijdeWeetjes: NextPage = () => {
   return (
-    <div className={container}>
-      <div className={parent}>
-        <div className={overlay} />
-        <Image
-          className={image}
-          src="/assets/projects/wereldwijdeweetjes.nl.png"
-          alt="image of wereldwijde weetjes' homepage"
-          layout="fill"
-          objectFit="cover"
-        />
-      </div>
+    <>
+      <HeadSeo />
+      <div className={container}>
+        <div className={parent}>
+          <div className={overlay} />
+          <Image
+            className={image}
+            src="/assets/projects/wereldwijdeweetjes.nl.png"
+            alt="image of wereldwijde weetjes' homepage"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
 
-      <Container className={mainTextContainer}>
-        <div className={textBlockPlacement}>
-          <Heading variant="h3" mb="16">
-            Wereldwijde Weetjes
-          </Heading>
-          <Text variant="large">
-            Wereldwijde Weetjes was my portfolio project at the end of
-            Codaisseur. It was an idea I had while talking to my mother,
-            she&apos;s a primary school teacher. And she noticed she had a
-            &apos;dead&apos; period right before breaks. Where the kids would be
-            finished with their work but there wouldn&apos;t be enough time to
-            start a new subject. And since she loves to travel herself she
-            thought it would be cool to teach the children something about the
-            world. And then more specifically a place she visited in one of her
-            holidays. She is great with Prezi but she wanted a platform she
-            could open, which contained all her Prezi&apos;s. And therefor she
-            could easily open on her board and share an adventure with the
-            class. The challenge for me was to build this and keep it as simple
-            as possible becuase she&apos;s not a super technical person. So she
-            would have to be able to log in, to some sort of admin environment
-            where she could easilly add new Prezi&apos;s and add a question
-            about that Prezi to test the class at the end of they paid
-            attention.
-          </Text>
-        </div>
-        <div className={technologiesContainer}>
-          <div className={padding}>
-            <Text
-              variant="large"
-              fontWeight="bold"
-              className={technologiesText}
-            >
-              Technologies
+        <Container className={mainTextContainer}>
+          <div className={textBlockPlacement}>
+            <Heading variant="h3" mb="16">
+              Wereldwijde Weetjes
+            </Heading>
+            <Text variant="large">
+              Wereldwijde Weetjes was my portfolio project at the end of
+              Codaisseur. It was an idea I had while talking to my mother,
+              she&apos;s a primary school teacher. And she noticed she had a
+              &apos;dead&apos; period right before breaks. Where the kids would
+              be finished with their work but there wouldn&apos;t be enough time
+              to start a new subject. And since she loves to travel herself she
+              thought it would be cool to teach the children something about the
+              world. And then more specifically a place she visited in one of
+              her holidays. She is great with Prezi but she wanted a platform
+              she could open, which contained all her Prezi&apos;s. And therefor
+              she could easily open on her board and share an adventure with the
+              class. The challenge for me was to build this and keep it as
+              simple as possible becuase she&apos;s not a super technical
+              person. So she would have to be able to log in, to some sort of
+              admin environment where she could easilly add new Prezi&apos;s and
+              add a question about that Prezi to test the class at the end of
+              they paid attention.
             </Text>
-            <ul className={list}>
-              <li className={listItemPadding}>
-                <Text variant="large" className={alignList}>
-                  <RiRadioButtonFill color="#454A54" />
-                  <a
-                    href="https://reactjs.org/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={technologiesListItems}
-                  >
-                    React
-                  </a>
-                </Text>
-              </li>
-              <li className={listItemPadding}>
-                <Text variant="large" className={alignList}>
-                  <RiRadioButtonFill color="#454A54" />
-                  <a
-                    href="https://react-redux.js.org/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={technologiesListItems}
-                  >
-                    Redux
-                  </a>
-                </Text>
-              </li>
-              <li className={listItemPadding}>
-                <Text variant="large" className={alignList}>
-                  <RiRadioButtonFill color="#454A54" />
-                  <a
-                    href="https://axios-http.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={technologiesListItems}
-                  >
-                    Axios
-                  </a>
-                </Text>
-              </li>
-              <li className={listItemPadding}>
-                <Text variant="large" className={alignList}>
-                  <RiRadioButtonFill color="#454A54" />
-                  <a
-                    href="https://react-bootstrap.netlify.app/getting-started/introduction/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={technologiesListItems}
-                  >
-                    React-Bootstrap
-                  </a>
-                </Text>
-              </li>
-              <li className={listItemPadding}>
-                <Text variant="large" className={alignList}>
-                  <RiRadioButtonFill color="#454A54" />
-                  <a
-                    href="https://nodejs.org/en/about/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={technologiesListItems}
-                  >
-                    Node JS
-                  </a>
-                </Text>
-              </li>
-              <li className={listItemPadding}>
-                <Text variant="large" className={alignList}>
-                  <RiRadioButtonFill color="#454A54" />
-                  <a
-                    href="https://expressjs.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={technologiesListItems}
-                  >
-                    Express
-                  </a>
-                </Text>
-              </li>
-              <li className={listItemPadding}>
-                <Text variant="large" className={alignList}>
-                  <RiRadioButtonFill color="#454A54" />
-                  <a
-                    href="https://sequelize.org/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={technologiesListItems}
-                  >
-                    Sequelize
-                  </a>
-                </Text>
-              </li>
-              <li className={listItemPadding}>
-                <Text variant="large" className={alignList}>
-                  <RiRadioButtonFill color="#454A54" />
-                  <a
-                    href="https://www.postgresql.org/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={technologiesListItems}
-                  >
-                    PostgreSQL database
-                  </a>
-                </Text>
-              </li>
-            </ul>
           </div>
-          <div className={bottomImage}>
-            <Image
-              src="/assets/click-on-tech.png"
-              alt="Klik voor meer informatie"
-              width="249px"
-              height="85"
-            />
+          <div className={technologiesContainer}>
+            <div className={padding}>
+              <Text
+                variant="large"
+                fontWeight="bold"
+                className={technologiesText}
+              >
+                Technologies
+              </Text>
+              <ul className={list}>
+                <li className={listItemPadding}>
+                  <Text variant="large" className={alignList}>
+                    <RiRadioButtonFill color="#454A54" />
+                    <a
+                      href="https://reactjs.org/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className={technologiesListItems}
+                    >
+                      React
+                    </a>
+                  </Text>
+                </li>
+                <li className={listItemPadding}>
+                  <Text variant="large" className={alignList}>
+                    <RiRadioButtonFill color="#454A54" />
+                    <a
+                      href="https://react-redux.js.org/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className={technologiesListItems}
+                    >
+                      Redux
+                    </a>
+                  </Text>
+                </li>
+                <li className={listItemPadding}>
+                  <Text variant="large" className={alignList}>
+                    <RiRadioButtonFill color="#454A54" />
+                    <a
+                      href="https://axios-http.com/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className={technologiesListItems}
+                    >
+                      Axios
+                    </a>
+                  </Text>
+                </li>
+                <li className={listItemPadding}>
+                  <Text variant="large" className={alignList}>
+                    <RiRadioButtonFill color="#454A54" />
+                    <a
+                      href="https://react-bootstrap.netlify.app/getting-started/introduction/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className={technologiesListItems}
+                    >
+                      React-Bootstrap
+                    </a>
+                  </Text>
+                </li>
+                <li className={listItemPadding}>
+                  <Text variant="large" className={alignList}>
+                    <RiRadioButtonFill color="#454A54" />
+                    <a
+                      href="https://nodejs.org/en/about/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className={technologiesListItems}
+                    >
+                      Node JS
+                    </a>
+                  </Text>
+                </li>
+                <li className={listItemPadding}>
+                  <Text variant="large" className={alignList}>
+                    <RiRadioButtonFill color="#454A54" />
+                    <a
+                      href="https://expressjs.com/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className={technologiesListItems}
+                    >
+                      Express
+                    </a>
+                  </Text>
+                </li>
+                <li className={listItemPadding}>
+                  <Text variant="large" className={alignList}>
+                    <RiRadioButtonFill color="#454A54" />
+                    <a
+                      href="https://sequelize.org/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className={technologiesListItems}
+                    >
+                      Sequelize
+                    </a>
+                  </Text>
+                </li>
+                <li className={listItemPadding}>
+                  <Text variant="large" className={alignList}>
+                    <RiRadioButtonFill color="#454A54" />
+                    <a
+                      href="https://www.postgresql.org/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className={technologiesListItems}
+                    >
+                      PostgreSQL database
+                    </a>
+                  </Text>
+                </li>
+              </ul>
+            </div>
+            <div className={bottomImage}>
+              <Image
+                src="/assets/click-on-tech.png"
+                alt="Klik voor meer informatie"
+                width="249px"
+                height="85"
+              />
+            </div>
           </div>
-        </div>
-        <div className={buttons}>
-          <div className={internal}>
-            <Link href="/#projects">
-              <button type="button" className={buttonGlowOnHover}>
-                Go back
-                <IoIosArrowForward style={{ marginLeft: "8px" }} />
-              </button>
-            </Link>
+          <div className={buttons}>
+            <div className={internal}>
+              <Link href="/#projects">
+                <button type="button" className={buttonGlowOnHover}>
+                  <IoIosArrowBack style={{ marginRight: "8px" }} />
+                  Go back
+                </button>
+              </Link>
+            </div>
+            <div className={external}>
+              <a
+                type="button"
+                target="_blank"
+                href="https://www.gassan.com/"
+                rel="noreferrer"
+                className={buttonGlowOnHover}
+              >
+                Visit project
+                <TbArrowUpRight style={{ marginLeft: "8px" }} />
+              </a>
+            </div>
           </div>
-          <div className={external}>
-            <a
-              type="button"
-              target="_blank"
-              href="https://www.gassan.com/"
-              rel="noreferrer"
-              className={buttonGlowOnHover}
-            >
-              Visit project
-              <TbArrowUpRight style={{ marginLeft: "8px" }} />
-            </a>
-          </div>
-        </div>
-      </Container>
-    </div>
+        </Container>
+      </div>
+    </>
   );
 };
 
@@ -426,18 +430,14 @@ const textBlockPlacement = parse({
   mb: "auto",
 });
 
-const buttons = parse(
-  {
-    display: "flex",
-    width: "100%",
-  },
-  css`
-    gap: 1rem;
-  `
-);
+const buttons = parse({
+  display: "flex",
+  width: "100%",
+});
 
 const internal = css`
   width: 100%;
+  margin-right: 1rem;
   @media screen and (hover: hover) and (pointer: fine) {
     svg {
       transition-property: transform;
@@ -447,7 +447,7 @@ const internal = css`
     &:hover {
       opacity: 0.9;
       svg {
-        transform: translateX(0.25rem);
+        transform: translateX(-0.25rem);
       }
     }
   }

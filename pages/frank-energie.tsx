@@ -9,139 +9,144 @@ import { Text } from "../components/ui/typograhpy/Text";
 import { RiRadioButtonFill } from "react-icons/ri";
 import { Container } from "../components/ui/Container";
 import Link from "next/link";
-import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack } from "react-icons/io";
 import { TbArrowUpRight } from "react-icons/tb";
+import { HeadSeo } from "../components/head";
 
 const FrankEnergie: NextPage = () => {
   return (
-    <div className={container}>
-      <div className={parent}>
-        <div className={overlay} />
-        <Image
-          className={image}
-          src="/assets/projects/frank-energie-page.png"
-          alt="image of frank-energie homepage"
-          layout="fill"
-          objectFit="cover"
-        />
-      </div>
-      <Container className={mainTextContainer}>
-        <div className={textBlockPlacement}>
-          <Heading variant="h3" mb="16">
-            Frank energie
-          </Heading>
-          <Text variant="large">
-            Frank energie is a Dutch company that specializes in energy, at
-            Reversed we were responsible for the online side of the company. I
-            worked on multiple issues on this project, developing new components
-            and fixing bugs. While working on an issue I always test my work
-            thourghly to make sure it is working as intended. A great example
-            was that I was working on adding a new component in the sign-up
-            flow. During this I noticed that the signup form was submitting also
-            when other buttons then the submit buttons were being pressed. After
-            identifying this bug I managed to locate the problem and offer a fix
-            for it. This was a good example of what I think is one of my bigger
-            strengths. I always try to keep the big picture in mind even while
-            working on a small part of the bigger picture.
-          </Text>
+    <>
+      <HeadSeo />
+      <div className={container}>
+        <div className={parent}>
+          <div className={overlay} />
+          <Image
+            className={image}
+            src="/assets/projects/frank-energie-page.png"
+            alt="image of frank-energie homepage"
+            layout="fill"
+            objectFit="cover"
+          />
         </div>
-        <div className={technologiesContainer}>
-          <div className={padding}>
-            <Text
-              variant="large"
-              fontWeight="bold"
-              className={technologiesText}
-            >
-              Technologies
+        <Container className={mainTextContainer}>
+          <div className={textBlockPlacement}>
+            <Heading variant="h3" mb="16">
+              Frank energie
+            </Heading>
+            <Text variant="large">
+              Frank energie is a Dutch company that specializes in energy, at
+              Reversed we were responsible for the online side of the company. I
+              worked on multiple issues on this project, developing new
+              components and fixing bugs. While working on an issue I always
+              test my work thourghly to make sure it is working as intended. A
+              great example was that I was working on adding a new component in
+              the sign-up flow. During this I noticed that the signup form was
+              submitting also when other buttons then the submit buttons were
+              being pressed. After identifying this bug I managed to locate the
+              problem and offer a fix for it. This was a good example of what I
+              think is one of my bigger strengths. I always try to keep the big
+              picture in mind even while working on a small part of the bigger
+              picture.
             </Text>
-            <ul className={list}>
-              <li className={listItemPadding}>
-                <Text variant="large" className={alignList}>
-                  <RiRadioButtonFill color="#454A54" />
-                  <a
-                    href="https://nextjs.org/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={technologiesListItems}
-                  >
-                    NextJs
-                  </a>
-                </Text>
-              </li>
-              <li className={listItemPadding}>
-                <Text variant="large" className={alignList}>
-                  <RiRadioButtonFill color="#454A54" />
-                  <a
-                    href="https://www.npmjs.com/package/@linaria/react"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={technologiesListItems}
-                  >
-                    Linaria
-                  </a>
-                </Text>
-              </li>
-              <li className={listItemPadding}>
-                <Text variant="large" className={alignList}>
-                  <RiRadioButtonFill color="#454A54" />
-                  <a
-                    href="https://www.typescriptlang.org/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={technologiesListItems}
-                  >
-                    Typescript
-                  </a>
-                </Text>
-              </li>
-              <li className={listItemPadding}>
-                <Text variant="large" className={alignList}>
-                  <RiRadioButtonFill color="#454A54" />
-                  <a
-                    href="https://www.sanity.io/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={technologiesListItems}
-                  >
-                    Sanity
-                  </a>
-                </Text>
-              </li>
-            </ul>
           </div>
-          <div className={bottomImage}>
-            <Image
-              src="/assets/click-on-tech.png"
-              alt="Klik voor meer informatie"
-              width="249px"
-              height="85"
-            />
+          <div className={technologiesContainer}>
+            <div className={padding}>
+              <Text
+                variant="large"
+                fontWeight="bold"
+                className={technologiesText}
+              >
+                Technologies
+              </Text>
+              <ul className={list}>
+                <li className={listItemPadding}>
+                  <Text variant="large" className={alignList}>
+                    <RiRadioButtonFill color="#454A54" />
+                    <a
+                      href="https://nextjs.org/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className={technologiesListItems}
+                    >
+                      NextJs
+                    </a>
+                  </Text>
+                </li>
+                <li className={listItemPadding}>
+                  <Text variant="large" className={alignList}>
+                    <RiRadioButtonFill color="#454A54" />
+                    <a
+                      href="https://www.npmjs.com/package/@linaria/react"
+                      target="_blank"
+                      rel="noreferrer"
+                      className={technologiesListItems}
+                    >
+                      Linaria
+                    </a>
+                  </Text>
+                </li>
+                <li className={listItemPadding}>
+                  <Text variant="large" className={alignList}>
+                    <RiRadioButtonFill color="#454A54" />
+                    <a
+                      href="https://www.typescriptlang.org/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className={technologiesListItems}
+                    >
+                      Typescript
+                    </a>
+                  </Text>
+                </li>
+                <li className={listItemPadding}>
+                  <Text variant="large" className={alignList}>
+                    <RiRadioButtonFill color="#454A54" />
+                    <a
+                      href="https://www.sanity.io/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className={technologiesListItems}
+                    >
+                      Sanity
+                    </a>
+                  </Text>
+                </li>
+              </ul>
+            </div>
+            <div className={bottomImage}>
+              <Image
+                src="/assets/click-on-tech.png"
+                alt="Klik voor meer informatie"
+                width="249px"
+                height="85"
+              />
+            </div>
           </div>
-        </div>
-        <div className={buttons}>
-          <div className={internal}>
-            <Link href="/#projects">
-              <button type="button" className={buttonGlowOnHover}>
-                Go back
-                <IoIosArrowForward style={{ marginLeft: "8px" }} />
-              </button>
-            </Link>
+          <div className={buttons}>
+            <div className={internal}>
+              <Link href="/#projects">
+                <button type="button" className={buttonGlowOnHover}>
+                  <IoIosArrowBack style={{ marginRight: "8px" }} />
+                  Go back
+                </button>
+              </Link>
+            </div>
+            <div className={external}>
+              <a
+                type="button"
+                target="_blank"
+                href="https://www.frankenergie.nl/"
+                rel="noreferrer"
+                className={buttonGlowOnHover}
+              >
+                Visit project
+                <TbArrowUpRight style={{ marginLeft: "8px" }} />
+              </a>
+            </div>
           </div>
-          <div className={external}>
-            <a
-              type="button"
-              target="_blank"
-              href="https://www.frankenergie.nl/"
-              rel="noreferrer"
-              className={buttonGlowOnHover}
-            >
-              Visit project
-              <TbArrowUpRight style={{ marginLeft: "8px" }} />
-            </a>
-          </div>
-        </div>
-      </Container>
-    </div>
+        </Container>
+      </div>
+    </>
   );
 };
 
@@ -368,18 +373,14 @@ const textBlockPlacement = parse({
   mb: "auto",
 });
 
-const buttons = parse(
-  {
-    display: "flex",
-    width: "100%",
-  },
-  css`
-    gap: 1rem;
-  `
-);
+const buttons = parse({
+  display: "flex",
+  width: "100%",
+});
 
 const internal = css`
   width: 100%;
+  margin-right: 1rem;
   @media screen and (hover: hover) and (pointer: fine) {
     svg {
       transition-property: transform;
@@ -389,7 +390,7 @@ const internal = css`
     &:hover {
       opacity: 0.9;
       svg {
-        transform: translateX(0.25rem);
+        transform: translateX(-0.25rem);
       }
     }
   }

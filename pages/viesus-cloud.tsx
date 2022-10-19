@@ -9,139 +9,144 @@ import { Text } from "../components/ui/typograhpy/Text";
 import { RiRadioButtonFill } from "react-icons/ri";
 import { Container } from "../components/ui/Container";
 import Link from "next/link";
-import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack } from "react-icons/io";
 import { TbArrowUpRight } from "react-icons/tb";
+import { HeadSeo } from "../components/head";
 
 const ViesusCloud: NextPage = () => {
   return (
-    <div className={container}>
-      <div className={parent}>
-        <div className={overlay} />
-        <Image
-          className={image}
-          src="/assets/projects/viesus.cloud.png"
-          alt="image of viesus cloud' homepage"
-          layout="fill"
-          objectFit="cover"
-        />
-      </div>
+    <>
+      <HeadSeo />
+      <div className={container}>
+        <div className={parent}>
+          <div className={overlay} />
+          <Image
+            className={image}
+            src="/assets/projects/viesus.cloud.png"
+            alt="image of viesus cloud' homepage"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
 
-      <Container className={mainTextContainer}>
-        <div className={textBlockPlacement}>
-          <Heading variant="h3" mb="16">
-            Viesus Cloud
-          </Heading>
-          <Text variant="large">
-            Viesus is the leading fully automatic image enhancement software.
-            For this company Reversed were asked to build a digital web app that
-            uses their API to improve images. After already having build their
-            website this was an awesome project. It had only just started when I
-            joined the company so it was the first project I got to see from the
-            ground up. I build a lot of the UI components that were later going
-            to be used through the entire app. This was another great learning
-            experience for me to see how Reversed handles a new project and
-            which steps they take. Working in sprints and therefor having to
-            deliver what was agreed upon every two weeks was my first time
-            experiencing an agile scrum way of working.
-          </Text>
-        </div>
-        <div className={technologiesContainer}>
-          <div className={padding}>
-            <Text
-              variant="large"
-              fontWeight="bold"
-              className={technologiesText}
-            >
-              Technologies
+        <Container className={mainTextContainer}>
+          <div className={textBlockPlacement}>
+            <Heading variant="h3" mb="16">
+              Viesus Cloud
+            </Heading>
+            <Text variant="large">
+              Viesus is the leading fully automatic image enhancement software.
+              For this company Reversed were asked to build a digital web app
+              that uses their API to improve images. After already having build
+              their website this was an awesome project. It had only just
+              started when I joined the company so it was the first project I
+              got to see from the ground up. I build a lot of the UI components
+              that were later going to be used through the entire app. This was
+              another great learning experience for me to see how Reversed
+              handles a new project and which steps they take. Working in
+              sprints and therefor having to deliver what was agreed upon every
+              two weeks was my first time experiencing an agile scrum way of
+              working.
             </Text>
-            <ul className={list}>
-              <li className={listItemPadding}>
-                <Text variant="large" className={alignList}>
-                  <RiRadioButtonFill color="#454A54" />
-                  <a
-                    href="https://nextjs.org/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={technologiesListItems}
-                  >
-                    NextJs
-                  </a>
-                </Text>
-              </li>
-              <li className={listItemPadding}>
-                <Text variant="large" className={alignList}>
-                  <RiRadioButtonFill color="#454A54" />
-                  <a
-                    href="https://linaria.dev/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={technologiesListItems}
-                  >
-                    Linaria
-                  </a>
-                </Text>
-              </li>
-              <li className={listItemPadding}>
-                <Text variant="large" className={alignList}>
-                  <RiRadioButtonFill color="#454A54" />
-                  <a
-                    href="https://www.typescriptlang.org/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={technologiesListItems}
-                  >
-                    Typescript
-                  </a>
-                </Text>
-              </li>
-              <li className={listItemPadding}>
-                <Text variant="large" className={alignList}>
-                  <RiRadioButtonFill color="#454A54" />
-                  <a
-                    href="https://www.sanity.io/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={technologiesListItems}
-                  >
-                    Sanity
-                  </a>
-                </Text>
-              </li>
-            </ul>
           </div>
-          <div className={bottomImage}>
-            <Image
-              src="/assets/click-on-tech.png"
-              alt="Klik voor meer informatie"
-              width="249px"
-              height="85"
-            />
+          <div className={technologiesContainer}>
+            <div className={padding}>
+              <Text
+                variant="large"
+                fontWeight="bold"
+                className={technologiesText}
+              >
+                Technologies
+              </Text>
+              <ul className={list}>
+                <li className={listItemPadding}>
+                  <Text variant="large" className={alignList}>
+                    <RiRadioButtonFill color="#454A54" />
+                    <a
+                      href="https://nextjs.org/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className={technologiesListItems}
+                    >
+                      NextJs
+                    </a>
+                  </Text>
+                </li>
+                <li className={listItemPadding}>
+                  <Text variant="large" className={alignList}>
+                    <RiRadioButtonFill color="#454A54" />
+                    <a
+                      href="https://linaria.dev/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className={technologiesListItems}
+                    >
+                      Linaria
+                    </a>
+                  </Text>
+                </li>
+                <li className={listItemPadding}>
+                  <Text variant="large" className={alignList}>
+                    <RiRadioButtonFill color="#454A54" />
+                    <a
+                      href="https://www.typescriptlang.org/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className={technologiesListItems}
+                    >
+                      Typescript
+                    </a>
+                  </Text>
+                </li>
+                <li className={listItemPadding}>
+                  <Text variant="large" className={alignList}>
+                    <RiRadioButtonFill color="#454A54" />
+                    <a
+                      href="https://www.sanity.io/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className={technologiesListItems}
+                    >
+                      Sanity
+                    </a>
+                  </Text>
+                </li>
+              </ul>
+            </div>
+            <div className={bottomImage}>
+              <Image
+                src="/assets/click-on-tech.png"
+                alt="Klik voor meer informatie"
+                width="249px"
+                height="85"
+              />
+            </div>
           </div>
-        </div>
-        <div className={buttons}>
-          <div className={internal}>
-            <Link href="/#projects">
-              <button type="button" className={buttonGlowOnHover}>
-                Go back
-                <IoIosArrowForward style={{ marginLeft: "8px" }} />
-              </button>
-            </Link>
+          <div className={buttons}>
+            <div className={internal}>
+              <Link href="/#projects">
+                <button type="button" className={buttonGlowOnHover}>
+                  <IoIosArrowBack style={{ marginRight: "8px" }} />
+                  Go back
+                </button>
+              </Link>
+            </div>
+            <div className={external}>
+              <a
+                type="button"
+                target="_blank"
+                href="https://www.viesus.cloud/"
+                rel="noreferrer"
+                className={buttonGlowOnHover}
+              >
+                Visit project
+                <TbArrowUpRight style={{ marginLeft: "8px" }} />
+              </a>
+            </div>
           </div>
-          <div className={external}>
-            <a
-              type="button"
-              target="_blank"
-              href="https://www.viesus.cloud/"
-              rel="noreferrer"
-              className={buttonGlowOnHover}
-            >
-              Visit project
-              <TbArrowUpRight style={{ marginLeft: "8px" }} />
-            </a>
-          </div>
-        </div>
-      </Container>
-    </div>
+        </Container>
+      </div>
+    </>
   );
 };
 
@@ -368,18 +373,14 @@ const textBlockPlacement = parse({
   mb: "auto",
 });
 
-const buttons = parse(
-  {
-    display: "flex",
-    width: "100%",
-  },
-  css`
-    gap: 1rem;
-  `
-);
+const buttons = parse({
+  display: "flex",
+  width: "100%",
+});
 
 const internal = css`
   width: 100%;
+  margin-right: 1rem;
   @media screen and (hover: hover) and (pointer: fine) {
     svg {
       transition-property: transform;
@@ -389,7 +390,7 @@ const internal = css`
     &:hover {
       opacity: 0.9;
       svg {
-        transform: translateX(0.25rem);
+        transform: translateX(-0.25rem);
       }
     }
   }

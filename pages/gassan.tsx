@@ -9,136 +9,140 @@ import { Text } from "../components/ui/typograhpy/Text";
 import { RiRadioButtonFill } from "react-icons/ri";
 import { Container } from "../components/ui/Container";
 import Link from "next/link";
-import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack } from "react-icons/io";
 import { TbArrowUpRight } from "react-icons/tb";
+import { HeadSeo } from "../components/head";
 
 const Gassan: NextPage = () => {
   return (
-    <div className={container}>
-      <div className={parent}>
-        <div className={overlay} />
-        <Image
-          className={image}
-          src="/assets/projects/gassan-hq.png"
-          alt="image of gassan hq"
-          layout="fill"
-          objectFit="cover"
-        />
-      </div>
-      <Container className={mainTextContainer}>
-        <div className={textBlockPlacement}>
-          <Heading variant="h3" mb="16">
-            Gassan
-          </Heading>
-          <Text variant="large">
-            Gassan is a project I worked on while working for Reversed Digital.
-            The website was build using React/NextJs and for me was my first
-            encounter with styled components. I had never worked with it before
-            and it&apos;s a real different way of styling. The awesome thing
-            about it from my point of view is being able to add props to styled
-            components. The reason why i prefer linaria/CSS is that you can
-            achieve the stuff you want to do with props as well with data
-            attributes. But it&apos;s a lot cleaner. I learned a lot working on
-            this project adding new components and fixing issues.
-          </Text>
+    <>
+      <HeadSeo />
+      <div className={container}>
+        <div className={parent}>
+          <div className={overlay} />
+          <Image
+            className={image}
+            src="/assets/projects/gassan-hq.png"
+            alt="image of gassan hq"
+            layout="fill"
+            objectFit="cover"
+          />
         </div>
-        <div className={technologiesContainer}>
-          <div className={padding}>
-            <Text
-              variant="large"
-              fontWeight="bold"
-              className={technologiesText}
-            >
-              Technologies
+        <Container className={mainTextContainer}>
+          <div className={textBlockPlacement}>
+            <Heading variant="h3" mb="16">
+              Gassan
+            </Heading>
+            <Text variant="large">
+              Gassan is a project I worked on while working for Reversed
+              Digital. The website was build using React/NextJs and for me was
+              my first encounter with styled components. I had never worked with
+              it before and it&apos;s a real different way of styling. The
+              awesome thing about it from my point of view is being able to add
+              props to styled components. The reason why i prefer linaria/CSS is
+              that you can achieve the stuff you want to do with props as well
+              with data attributes. But it&apos;s a lot cleaner. I learned a lot
+              working on this project adding new components and fixing issues.
             </Text>
-            <ul className={list}>
-              <li className={listItemPadding}>
-                <Text variant="large" className={alignList}>
-                  <RiRadioButtonFill color="#454A54" />
-                  <a
-                    href="https://nextjs.org/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={technologiesListItems}
-                  >
-                    NextJs
-                  </a>
-                </Text>
-              </li>
-              <li className={listItemPadding}>
-                <Text variant="large" className={alignList}>
-                  <RiRadioButtonFill color="#454A54" />
-                  <a
-                    href="https://styled-components.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={technologiesListItems}
-                  >
-                    Styled components
-                  </a>
-                </Text>
-              </li>
-              <li className={listItemPadding}>
-                <Text variant="large" className={alignList}>
-                  <RiRadioButtonFill color="#454A54" />
-                  <a
-                    href="https://www.typescriptlang.org/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={technologiesListItems}
-                  >
-                    Typescript
-                  </a>
-                </Text>
-              </li>
-              <li className={listItemPadding}>
-                <Text variant="large" className={alignList}>
-                  <RiRadioButtonFill color="#454A54" />
-                  <a
-                    href="https://kontent.ai/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={technologiesListItems}
-                  >
-                    Kentico Kontent
-                  </a>
-                </Text>
-              </li>
-            </ul>
           </div>
-          <div className={bottomImage}>
-            <Image
-              src="/assets/click-on-tech.png"
-              alt="Klik voor meer informatie"
-              width="249px"
-              height="85"
-            />
+          <div className={technologiesContainer}>
+            <div className={padding}>
+              <Text
+                variant="large"
+                fontWeight="bold"
+                className={technologiesText}
+              >
+                Technologies
+              </Text>
+              <ul className={list}>
+                <li className={listItemPadding}>
+                  <Text variant="large" className={alignList}>
+                    <RiRadioButtonFill color="#454A54" />
+                    <a
+                      href="https://nextjs.org/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className={technologiesListItems}
+                    >
+                      NextJs
+                    </a>
+                  </Text>
+                </li>
+                <li className={listItemPadding}>
+                  <Text variant="large" className={alignList}>
+                    <RiRadioButtonFill color="#454A54" />
+                    <a
+                      href="https://styled-components.com/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className={technologiesListItems}
+                    >
+                      Styled components
+                    </a>
+                  </Text>
+                </li>
+                <li className={listItemPadding}>
+                  <Text variant="large" className={alignList}>
+                    <RiRadioButtonFill color="#454A54" />
+                    <a
+                      href="https://www.typescriptlang.org/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className={technologiesListItems}
+                    >
+                      Typescript
+                    </a>
+                  </Text>
+                </li>
+                <li className={listItemPadding}>
+                  <Text variant="large" className={alignList}>
+                    <RiRadioButtonFill color="#454A54" />
+                    <a
+                      href="https://kontent.ai/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className={technologiesListItems}
+                    >
+                      Kentico Kontent
+                    </a>
+                  </Text>
+                </li>
+              </ul>
+            </div>
+            <div className={bottomImage}>
+              <Image
+                src="/assets/click-on-tech.png"
+                alt="Klik voor meer informatie"
+                width="249px"
+                height="85"
+              />
+            </div>
           </div>
-        </div>
-        <div className={buttons}>
-          <div className={internal}>
-            <Link href="/#projects">
-              <button type="button" className={buttonGlowOnHover}>
-                Go back
-                <IoIosArrowForward style={{ marginLeft: "8px" }} />
-              </button>
-            </Link>
+          <div className={buttons}>
+            <div className={internal}>
+              <Link href="/#projects">
+                <button type="button" className={buttonGlowOnHover}>
+                  <IoIosArrowBack style={{ marginRight: "8px" }} />
+                  Go back
+                </button>
+              </Link>
+            </div>
+            <div className={external}>
+              <a
+                type="button"
+                target="_blank"
+                href="https://www.gassan.com/"
+                rel="noreferrer"
+                className={buttonGlowOnHover}
+              >
+                Visit project
+                <TbArrowUpRight style={{ marginLeft: "8px" }} />
+              </a>
+            </div>
           </div>
-          <div className={external}>
-            <a
-              type="button"
-              target="_blank"
-              href="https://www.gassan.com/"
-              rel="noreferrer"
-              className={buttonGlowOnHover}
-            >
-              Visit project
-              <TbArrowUpRight style={{ marginLeft: "8px" }} />
-            </a>
-          </div>
-        </div>
-      </Container>
-    </div>
+        </Container>
+      </div>
+    </>
   );
 };
 
@@ -365,18 +369,14 @@ const textBlockPlacement = parse({
   mb: "auto",
 });
 
-const buttons = parse(
-  {
-    display: "flex",
-    width: "100%",
-  },
-  css`
-    gap: 1rem;
-  `
-);
+const buttons = parse({
+  display: "flex",
+  width: "100%",
+});
 
 const internal = css`
   width: 100%;
+  margin-right: 1rem;
   @media screen and (hover: hover) and (pointer: fine) {
     svg {
       transition-property: transform;
@@ -386,7 +386,7 @@ const internal = css`
     &:hover {
       opacity: 0.9;
       svg {
-        transform: translateX(0.25rem);
+        transform: translateX(-0.25rem);
       }
     }
   }

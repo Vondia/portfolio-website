@@ -13,7 +13,7 @@ type TextProps = HTMLAttributes<HTMLElement> &
 export const Text: FC<TextProps> = ({
   color = "#1f2937",
   as = "div",
-  fontWeight = "medium",
+  fontWeight = "normal",
   variant,
   className,
   ...rest

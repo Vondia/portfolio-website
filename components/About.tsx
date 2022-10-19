@@ -103,11 +103,11 @@ export const About: FC = () => {
                 in that month; I knew what I didn&apos;t want and after careful
                 consideration I knew what I DID want. I went out to search for a
                 Digital Agency because I wanted to be a web/app developer. This
-                is when I came across and joined Reversed Digital, a small
-                Digital Agency located in Utrecht. I&apos;ve worked there for
-                well over a year and learned/improved a lot. After which I moved
-                on to Incentro a bigger company to help me grow even more. I
-                started working there November first 2022.
+                is when I came across and joined Reversed Digital, a Digital
+                Agency located in Utrecht. I&apos;ve worked there for well over
+                a year and learned/improved a lot. After which I moved on to
+                Incentro a bigger company to help me grow even more. I started
+                working there November first 2022.
               </Text>
             </div>
           ) : (
@@ -585,7 +585,6 @@ export const About: FC = () => {
                 <strong className={styles.bionicReading}>Reve</strong>rsed{" "}
                 <strong className={styles.bionicReading}>Digi</strong>tal,{" "}
                 <strong className={styles.bionicReading}>a</strong>{" "}
-                <strong className={styles.bionicReading}>sma</strong>ll{" "}
                 <strong className={styles.bionicReading}>Digit</strong>al{" "}
                 <strong className={styles.bionicReading}>Age</strong>ncy{" "}
                 <strong className={styles.bionicReading}>loca</strong>ted{" "}

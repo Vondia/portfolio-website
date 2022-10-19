@@ -137,7 +137,7 @@ const item = parse(
   },
   css`
     grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
+    grid-gap: 1.5rem 1rem;
   `
 );
 

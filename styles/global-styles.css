@@ -11,3 +11,7 @@ html {
   letter-spacing: 0.025em;
   scroll-behavior: smooth;
 }
+::selection {
+  background-color: #82a1f6;
+  color: #fcf5ef;
+}

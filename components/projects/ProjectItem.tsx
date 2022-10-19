@@ -28,35 +28,39 @@ export const ProjectItem: FC<ProjectItemProps> = ({
   const [viewRef, inView] = useInView({ triggerOnce: true });
   const visitedHomePageOnce = useVisitedHomePage();
   return (
-    <div
-      className={parent}
-      id={title.replace(/\s/g, "_") + "_project"}
-      data-in-view={inView ? "" : null}
-      data-on-first-render={inView && !visitedHomePageOnce ? "" : null}
-      data-animation-variant={animation}
-    >
-      <div ref={viewRef}>
-        <Image src={imageUrl} alt="/" width="400px" height="400px" />
-      </div>
-      <div className={text}>
-        <Heading variant="h4" mb="8">
-          {title}
-        </Heading>
-      </div>
-      <div className={cx(text, textPB)}>
-        <Text variant="regular" color="shade400">
-          &quot;{subTitle}&quot;
-        </Text>
-      </div>
+    <>
       <Link href={projectUrl}>
-        <div className={buttonDiv}>
-          <button className={button}>
-            More information on this project
-            <IoIosArrowForward style={{ marginLeft: "8px" }} />
-          </button>
-        </div>
+        <a>
+          <div
+            className={parent}
+            id={title.replace(/\s/g, "_") + "_project"}
+            data-in-view={inView ? "" : null}
+            data-on-first-render={inView && !visitedHomePageOnce ? "" : null}
+            data-animation-variant={animation}
+          >
+            <div ref={viewRef}>
+              <Image src={imageUrl} alt="/" width="400px" height="400px" />
+            </div>
+            <div className={text}>
+              <Heading variant="h4" mb="8">
+                {title}
+              </Heading>
+            </div>
+            <div className={cx(text, textPB)}>
+              <Text variant="regular" color="shade400">
+                &quot;{subTitle}&quot;
+              </Text>
+            </div>
+            <div className={buttonDiv}>
+              <button className={button}>
+                More information on this project
+                <IoIosArrowForward style={{ marginLeft: "8px" }} />
+              </button>
+            </div>
+          </div>
+        </a>
       </Link>
-    </div>
+    </>
   );
 };
 

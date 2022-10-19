@@ -53,17 +53,7 @@ export const Contact: FC<ContactProps> = () => {
                 </Heading>
                 <Text variant="regular">Front-End Developer</Text>
                 <Text variant="regular" className={styles.myNameDescription}>
-                  Currently I&apos;m working for a small digital agency by the
-                  name of{" "}
-                  <a
-                    href="https://reverseddigital.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={styles.link}
-                  >
-                    Reversed Digital
-                  </a>
-                  . But at the end of this month I will be starting a new job at{" "}
+                  Recently started my new job at{" "}
                   <a
                     href="https://www.incentro.com/"
                     target="_blank"
@@ -72,8 +62,9 @@ export const Contact: FC<ContactProps> = () => {
                   >
                     Incentro
                   </a>
-                  . Really looking forward to it. And I&apos;ll keep you posted
-                  on my work there.
+                  . As Front-End developer I&apos;ll keep you posted on my work
+                  there. To contact me you can connect with me on LinkedIn or
+                  send me a message via the form.
                 </Text>
               </div>
               <div>

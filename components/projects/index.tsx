@@ -110,20 +110,17 @@ const title = parse(
 
 const projects = parse(
   {
-    display: "grid",
+    display: "flex",
   },
   css`
     opacity: 1;
-    grid-template-columns: 1fr;
-    grid-column-gap: 3rem;
-
-    @media screen and (min-width: ${theme.breakpoints.small}) {
-      grid-column-gap: 2rem;
-    }
+    justify-content: center;
 
     @media screen and (min-width: ${theme.breakpoints.medium}) {
+      display: grid;
       grid-template-columns: 1fr 1fr;
       grid-column-gap: 5rem;
+      margin-bottom: unset;
     }
 
     @media screen and (min-width: ${theme.breakpoints.large}) {

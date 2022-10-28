@@ -192,7 +192,7 @@ const WereldwijdeWeetjes: NextPage = () => {
               <a
                 type="button"
                 target="_blank"
-                href="https://www.gassan.com/"
+                href="https://www.wereldwijdeweetjes.nl/"
                 rel="noreferrer"
                 className={buttonGlowOnHover}
               >

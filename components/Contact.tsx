@@ -158,9 +158,9 @@ export const Contact: FC<ContactProps> = () => {
         </div>
         <div className={styles.moveToTopContainer}>
           <Link href="/">
-            <div className={styles.moveToTopIcon}>
+            <a className={styles.moveToTopIcon}>
               <HiOutlineChevronDoubleUp size={30} />
-            </div>
+            </a>
           </Link>
         </div>
       </div>

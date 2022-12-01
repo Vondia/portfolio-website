@@ -101,6 +101,7 @@ export const Contact: FC<ContactProps> = () => {
                 <div className={styles.formGrid}>
                   <div className={styles.formLine}>
                     <Input
+                      status="disabled"
                       type="text"
                       label={<Span variant="input-label">Name</Span>}
                       name="name"
@@ -111,6 +112,7 @@ export const Contact: FC<ContactProps> = () => {
                   </div>
                   <div className={styles.formLine}>
                     <Input
+                      status="disabled"
                       name="phone"
                       type="tel"
                       value={phone}
@@ -121,6 +123,7 @@ export const Contact: FC<ContactProps> = () => {
                 </div>
                 <div className={styles.inputsBellowPhoneNumber}>
                   <Input
+                    status="disabled"
                     type="email"
                     name="email"
                     value={email}
@@ -131,6 +134,7 @@ export const Contact: FC<ContactProps> = () => {
                 </div>
                 <div className={styles.inputsBellowPhoneNumber}>
                   <Input
+                    status="disabled"
                     type="text"
                     name="subject"
                     value={subject}
@@ -141,6 +145,7 @@ export const Contact: FC<ContactProps> = () => {
                 </div>
                 <div className={styles.inputsBellowPhoneNumber}>
                   <TextArea
+                    status="disabled"
                     rows={10}
                     name="message"
                     value={message}
@@ -149,10 +154,18 @@ export const Contact: FC<ContactProps> = () => {
                     onChange={(e) => setMessage(e.target.value)}
                   />
                 </div>
-                <button type="submit" className={styles.sendButton}>
+                <button type="submit" className={styles.sendButton} disabled>
                   Send message
                 </button>
               </form>
+              <Text
+                variant="micro"
+                color="shade500"
+                style={{ marginTop: "1rem" }}
+              >
+                *Temporarely disabled the form due to spam, don't hesitate to
+                contact me via LinkedIn.
+              </Text>
             </div>
           </div>
         </div>

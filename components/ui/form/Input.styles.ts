@@ -120,7 +120,7 @@ export const baseInput = parse(
     &:disabled {
       cursor: not-allowed;
       pointer-events: none;
-      background: ${theme.colors.disabled};
+      /* background: ${theme.colors.disabled}; */
     }
   `
 );

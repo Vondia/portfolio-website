@@ -163,8 +163,8 @@ export const Contact: FC<ContactProps> = () => {
                 color="shade500"
                 style={{ marginTop: "1rem" }}
               >
-                *Temporarely disabled the form due to spam, don't hesitate to
-                contact me via LinkedIn.
+                *Temporarely disabled the form due to bot-spam, don&apos;t
+                hesitate to contact me via LinkedIn.
               </Text>
             </div>
           </div>

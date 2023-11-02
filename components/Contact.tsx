@@ -53,7 +53,7 @@ export const Contact: FC<ContactProps> = () => {
                 </Heading>
                 <Text variant="regular">Front-End Developer</Text>
                 <Text variant="regular" className={styles.myNameDescription}>
-                  Recently started my new job at{" "}
+                  I&apos;m currently working at{" "}
                   <a
                     href="https://www.incentro.com/"
                     target="_blank"
@@ -163,7 +163,7 @@ export const Contact: FC<ContactProps> = () => {
                 color="shade500"
                 style={{ marginTop: "1rem" }}
               >
-                *Temporarely disabled the form due to spam, don't hesitate to
+                *Temporarely disabled the form due to spam, don&apos;t hesitate to
                 contact me via LinkedIn.
               </Text>
             </div>

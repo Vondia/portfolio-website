@@ -1,17 +1,17 @@
-import React from "react";
-import { css } from "linaria";
-import { rgba } from "polished";
-import { parse, theme } from "../config/theme";
-import type { NextPage } from "next";
-import Image from "next/image";
-import { Heading } from "../components/ui/typograhpy/Heading";
-import { Text } from "../components/ui/typograhpy/Text";
-import { RiRadioButtonFill } from "react-icons/ri";
-import { Container } from "../components/ui/Container";
-import Link from "next/link";
-import { IoIosArrowBack } from "react-icons/io";
-import { TbArrowUpRight } from "react-icons/tb";
-import { HeadSeo } from "../components/head";
+import React from 'react'
+import { css } from 'linaria'
+import { rgba } from 'polished'
+import { parse, theme } from '../config/theme'
+import type { NextPage } from 'next'
+import Image from 'next/image'
+import { Heading } from '../components/ui/typograhpy/Heading'
+import { Text } from '../components/ui/typograhpy/Text'
+import { RiRadioButtonFill } from 'react-icons/ri'
+import { Container } from '../components/ui/Container'
+import Link from 'next/link'
+import { IoIosArrowBack } from 'react-icons/io'
+import { TbArrowUpRight } from 'react-icons/tb'
+import { HeadSeo } from '../components/head'
 
 const ViesusCloud: NextPage = () => {
   return (
@@ -52,7 +52,7 @@ const ViesusCloud: NextPage = () => {
           <div className={technologiesContainer}>
             <div className={padding}>
               <Text
-                variant="large"
+                variant="regular"
                 fontWeight="bold"
                 className={technologiesText}
               >
@@ -60,7 +60,7 @@ const ViesusCloud: NextPage = () => {
               </Text>
               <ul className={list}>
                 <li className={listItemPadding}>
-                  <Text variant="large" className={alignList}>
+                  <Text variant="regular" className={alignList}>
                     <RiRadioButtonFill color="#454A54" />
                     <a
                       href="https://nextjs.org/"
@@ -73,7 +73,7 @@ const ViesusCloud: NextPage = () => {
                   </Text>
                 </li>
                 <li className={listItemPadding}>
-                  <Text variant="large" className={alignList}>
+                  <Text variant="regular" className={alignList}>
                     <RiRadioButtonFill color="#454A54" />
                     <a
                       href="https://linaria.dev/"
@@ -86,7 +86,7 @@ const ViesusCloud: NextPage = () => {
                   </Text>
                 </li>
                 <li className={listItemPadding}>
-                  <Text variant="large" className={alignList}>
+                  <Text variant="regular" className={alignList}>
                     <RiRadioButtonFill color="#454A54" />
                     <a
                       href="https://www.typescriptlang.org/"
@@ -99,7 +99,7 @@ const ViesusCloud: NextPage = () => {
                   </Text>
                 </li>
                 <li className={listItemPadding}>
-                  <Text variant="large" className={alignList}>
+                  <Text variant="regular" className={alignList}>
                     <RiRadioButtonFill color="#454A54" />
                     <a
                       href="https://www.sanity.io/"
@@ -126,7 +126,7 @@ const ViesusCloud: NextPage = () => {
             <div className={internal}>
               <Link href="/#projects">
                 <button type="button" className={buttonGlowOnHover}>
-                  <IoIosArrowBack style={{ marginRight: "8px" }} />
+                  <IoIosArrowBack style={{ marginRight: '8px' }} />
                   Go back
                 </button>
               </Link>
@@ -140,21 +140,21 @@ const ViesusCloud: NextPage = () => {
                 className={buttonGlowOnHover}
               >
                 Visit project
-                <TbArrowUpRight style={{ marginLeft: "8px" }} />
+                <TbArrowUpRight style={{ marginLeft: '8px' }} />
               </a>
             </div>
           </div>
         </Container>
       </div>
     </>
-  );
-};
+  )
+}
 
-const container = parse({ width: "100%", mb: "16" });
+const container = parse({ width: '100%', mb: '16' })
 
 const parent = parse(
   {
-    position: "relative",
+    position: 'relative',
   },
   css`
     width: 100vw;
@@ -164,12 +164,12 @@ const parent = parse(
       height: 50vh;
     }
   `
-);
+)
 
 const overlay = parse(
   {
-    position: "absolute",
-    width: "100%",
+    position: 'absolute',
+    width: '100%',
   },
   css`
     top: 0;
@@ -182,24 +182,24 @@ const overlay = parse(
       height: 50vh;
     }
   `
-);
+)
 
 const image = parse(
   {
-    position: "absolute",
+    position: 'absolute',
   },
   css`
     z-index: 1;
   `
-);
+)
 
 const mainTextContainer = parse(
   {
-    mx: "auto",
-    pt: "32",
-    mb: "16",
-    display: "grid",
-    alignItems: "center",
+    mx: 'auto',
+    pt: '32',
+    mb: '16',
+    display: 'grid',
+    alignItems: 'center',
   },
   css`
     grid-template-columns: 1fr;
@@ -212,22 +212,22 @@ const mainTextContainer = parse(
       grid-template-columns: 2fr 1fr;
     }
   `
-);
+)
 
 const technologiesContainer = parse(
   {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   css`
     flex-direction: column;
   `
-);
+)
 
 const padding = parse(
   {
-    p: "16",
+    p: '16',
   },
   css`
     min-width: 16rem;
@@ -282,17 +282,17 @@ const padding = parse(
       }
     }
   `
-);
+)
 
 const technologiesText = parse({
-  pb: "8",
-  textAlign: "center",
-});
+  pb: '8',
+  textAlign: 'center',
+})
 
 const technologiesListItems = parse(
   {
-    ml: "4",
-    position: "relative",
+    ml: '4',
+    position: 'relative',
   },
   css`
     background-image: linear-gradient(
@@ -309,7 +309,7 @@ const technologiesListItems = parse(
     transition: all 0.4s ease-in-out;
 
     &:before {
-      content: "";
+      content: '';
       background-image: linear-gradient(to right, #6a47ff, #82a1f6);
       display: block;
       position: absolute;
@@ -329,20 +329,20 @@ const technologiesListItems = parse(
       }
     }
   `
-);
+)
 
 const listItemPadding = parse({
-  py: "8",
-});
+  py: '8',
+})
 
 const alignList = parse({
-  display: "flex",
-  alignItems: "center",
-});
+  display: 'flex',
+  alignItems: 'center',
+})
 
 const list = parse(
   {
-    display: "grid",
+    display: 'grid',
   },
   css`
     grid-template-columns: 1fr 1fr;
@@ -352,13 +352,13 @@ const list = parse(
       grid-template-columns: 1fr;
     }
   `
-);
+)
 
 const bottomImage = parse(
   {
-    display: "flex",
-    justifyContent: "flex-end",
-    mt: "8",
+    display: 'flex',
+    justifyContent: 'flex-end',
+    mt: '8',
   },
   css`
     margin-top: -1rem;
@@ -367,16 +367,16 @@ const bottomImage = parse(
       margin-right: -8rem;
     }
   `
-);
+)
 
 const textBlockPlacement = parse({
-  mb: "auto",
-});
+  mb: 'auto',
+})
 
 const buttons = parse({
-  display: "flex",
-  width: "100%",
-});
+  display: 'flex',
+  width: '100%',
+})
 
 const internal = css`
   width: 100%;
@@ -394,7 +394,7 @@ const internal = css`
       }
     }
   }
-`;
+`
 
 const external = css`
   width: 100%;
@@ -411,7 +411,7 @@ const external = css`
       }
     }
   }
-`;
+`
 
 const buttonGlowOnHover = css`
   width: 100%;
@@ -433,7 +433,7 @@ const buttonGlowOnHover = css`
   }
 
   &:before {
-    content: "";
+    content: '';
     background: linear-gradient(
       45deg,
       #0beef9,
@@ -474,7 +474,7 @@ const buttonGlowOnHover = css`
 
   &:after {
     z-index: -1;
-    content: "";
+    content: '';
     position: absolute;
     width: 100%;
     height: 100%;
@@ -495,6 +495,6 @@ const buttonGlowOnHover = css`
       background-position: 0 0;
     }
   }
-`;
+`
 
-export default ViesusCloud;
+export default ViesusCloud

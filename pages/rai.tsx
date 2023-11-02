@@ -33,7 +33,7 @@ const Rai: NextPage = () => {
             <Heading variant="h3" mb="16">
               RAI exhibitor portal
             </Heading>
-            <Text variant="regular">
+            <Text variant="large">
               For the RAI I was part of a team (1 other developer and a
               designer), that was tasked with building a new exhibitor portal.
               This portal is a place where people who have a stand on a fair see
@@ -65,7 +65,7 @@ const Rai: NextPage = () => {
               </Text>
               <ul className={list}>
                 <li className={listItemPadding}>
-                  <Text variant="large" className={alignList}>
+                  <Text variant="regular" className={alignList}>
                     <RiRadioButtonFill color="#454A54" />
                     <a
                       href="https://nextjs.org/"
@@ -73,12 +73,12 @@ const Rai: NextPage = () => {
                       rel="noreferrer"
                       className={technologiesListItems}
                     >
-                      Next.js (with App Router)
+                      Next.js (13.5)
                     </a>
                   </Text>
                 </li>
                 <li className={listItemPadding}>
-                  <Text variant="large" className={alignList}>
+                  <Text variant="regular" className={alignList}>
                     <RiRadioButtonFill color="#454A54" />
                     <a
                       href="https://tailwindcss.com/"
@@ -91,7 +91,7 @@ const Rai: NextPage = () => {
                   </Text>
                 </li>
                 <li className={listItemPadding}>
-                  <Text variant="large" className={alignList}>
+                  <Text variant="regular" className={alignList}>
                     <RiRadioButtonFill color="#454A54" />
                     <a
                       href="https://storybook.js.org/"
@@ -104,7 +104,7 @@ const Rai: NextPage = () => {
                   </Text>
                 </li>
                 <li className={listItemPadding}>
-                  <Text variant="large" className={alignList}>
+                  <Text variant="regular" className={alignList}>
                     <RiRadioButtonFill color="#454A54" />
                     <a
                       href="https://www.sitecore.com/"
@@ -117,7 +117,7 @@ const Rai: NextPage = () => {
                   </Text>
                 </li>
                 <li className={listItemPadding}>
-                  <Text variant="large" className={alignList}>
+                  <Text variant="regular" className={alignList}>
                     <RiRadioButtonFill color="#454A54" />
                     <a
                       href="https://www.typescriptlang.org/"
@@ -130,7 +130,7 @@ const Rai: NextPage = () => {
                   </Text>
                 </li>
                 <li className={listItemPadding}>
-                  <Text variant="large" className={alignList}>
+                  <Text variant="regular" className={alignList}>
                     <RiRadioButtonFill color="#454A54" />
                     <a
                       href="https://www.radix-ui.com/"
@@ -143,7 +143,7 @@ const Rai: NextPage = () => {
                   </Text>
                 </li>
                 <li className={listItemPadding}>
-                  <Text variant="large" className={alignList}>
+                  <Text variant="regular" className={alignList}>
                     <RiRadioButtonFill color="#454A54" />
                     <a
                       href="https://zustand-demo.pmnd.rs/"
@@ -156,7 +156,7 @@ const Rai: NextPage = () => {
                   </Text>
                 </li>
                 <li className={listItemPadding}>
-                  <Text variant="large" className={alignList}>
+                  <Text variant="regular" className={alignList}>
                     <RiRadioButtonFill color="#454A54" />
                     <a
                       href="https://graphql.org/"

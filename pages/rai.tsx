@@ -49,7 +49,7 @@ const Rai: NextPage = () => {
               project being setup. And our portal needed data from this cloud
               database. Our portal was the first project to go live with data
               from this cloud database. So we also got to help think about what
-              was the best way to implement sertain parts of this cloud
+              was the best way to implement certain parts of this cloud
               database. This was a super fun project to work on and I learned a
               lot from it.
             </Text>

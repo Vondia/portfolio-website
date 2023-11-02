@@ -1,33 +1,33 @@
-import React, { FC, useState } from "react";
-import { Text } from "./ui/typograhpy/Text";
-import { Heading } from "./ui/typograhpy/Heading";
-import Image from "next/image";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import * as styles from "./Contact.styles";
-import { HiOutlineChevronDoubleUp } from "react-icons/hi";
-import Link from "next/link";
-import { Input } from "./ui/form/Input";
-import { Span } from "./ui/typograhpy/Span";
-import { TextArea } from "./ui/form/TextArea";
-import { Container } from "./ui/Container";
+import React, { FC, useState } from 'react'
+import { Text } from './ui/typograhpy/Text'
+import { Heading } from './ui/typograhpy/Heading'
+import Image from 'next/image'
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
+import * as styles from './Contact.styles'
+import { HiOutlineChevronDoubleUp } from 'react-icons/hi'
+import Link from 'next/link'
+import { Input } from './ui/form/Input'
+import { Span } from './ui/typograhpy/Span'
+import { TextArea } from './ui/form/TextArea'
+import { Container } from './ui/Container'
 
-type ContactProps = {};
+type ContactProps = {}
 
 export const Contact: FC<ContactProps> = () => {
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+  const [name, setName] = useState('')
+  const [phone, setPhone] = useState('')
+  const [email, setEmail] = useState('')
+  const [subject, setSubject] = useState('')
+  const [message, setMessage] = useState('')
 
   //   e: React.FormEvent<HTMLInputElement>
   const handleSubmit = () => {
-    setName(name);
-    setPhone(phone);
-    setEmail(email);
-    setSubject(subject);
-    setMessage(message);
-  };
+    setName(name)
+    setPhone(phone)
+    setEmail(email)
+    setSubject(subject)
+    setMessage(message)
+  }
   return (
     <Container id="contact" className={styles.parent}>
       <div className={styles.container}>
@@ -53,7 +53,7 @@ export const Contact: FC<ContactProps> = () => {
                 </Heading>
                 <Text variant="regular">Front-End Developer</Text>
                 <Text variant="regular" className={styles.myNameDescription}>
-                  Recently started my new job at{" "}
+                  I&apos;m currently working at{' '}
                   <a
                     href="https://www.incentro.com/"
                     target="_blank"
@@ -107,7 +107,7 @@ export const Contact: FC<ContactProps> = () => {
                       name="name"
                       value={name}
                       required={true}
-                      onChange={(e) => setName(e.target.value)}
+                      onChange={e => setName(e.target.value)}
                     />
                   </div>
                   <div className={styles.formLine}>
@@ -117,7 +117,7 @@ export const Contact: FC<ContactProps> = () => {
                       type="tel"
                       value={phone}
                       label="Phone number"
-                      onChange={(e) => setPhone(e.target.value)}
+                      onChange={e => setPhone(e.target.value)}
                     />
                   </div>
                 </div>
@@ -129,7 +129,7 @@ export const Contact: FC<ContactProps> = () => {
                     value={email}
                     label="Email"
                     required={true}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={e => setEmail(e.target.value)}
                   />
                 </div>
                 <div className={styles.inputsBellowPhoneNumber}>
@@ -140,7 +140,7 @@ export const Contact: FC<ContactProps> = () => {
                     value={subject}
                     label="Subject"
                     required={true}
-                    onChange={(e) => setSubject(e.target.value)}
+                    onChange={e => setSubject(e.target.value)}
                   />
                 </div>
                 <div className={styles.inputsBellowPhoneNumber}>
@@ -151,7 +151,7 @@ export const Contact: FC<ContactProps> = () => {
                     value={message}
                     label="Message"
                     required={true}
-                    onChange={(e) => setMessage(e.target.value)}
+                    onChange={e => setMessage(e.target.value)}
                   />
                 </div>
                 <button type="submit" className={styles.sendButton} disabled>
@@ -161,7 +161,7 @@ export const Contact: FC<ContactProps> = () => {
               <Text
                 variant="micro"
                 color="shade500"
-                style={{ marginTop: "1rem" }}
+                style={{ marginTop: '1rem' }}
               >
                 *Temporarely disabled the form due to bot-spam, don&apos;t
                 hesitate to contact me via LinkedIn.
@@ -178,5 +178,5 @@ export const Contact: FC<ContactProps> = () => {
         </div>
       </div>
     </Container>
-  );
-};
+  )
+}

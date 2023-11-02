@@ -21,7 +21,7 @@ export const Navbar: FC<NavbarProps> = ({ animationVariant }) => {
       router.asPath === "/gassan" ||
       router.asPath === "/frank-energie" ||
       router.asPath === "/viesus-cloud" ||
-      router.asPath === "/wereldwijdeweetjes"
+      router.asPath === "/rai"
     ) {
       setNavBg("transparent");
       setLinkColor("#fcf5ef");

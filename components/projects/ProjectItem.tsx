@@ -81,6 +81,20 @@ const parent = parse(
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     background-color: ${theme.colors.white};
 
+    @media screen and (hover: hover) and (pointer: fine) {
+        svg {
+          transition-property: transform;
+          transition-duration: 0.25s;
+        }
+
+        &:hover {
+          opacity: 0.9;
+          svg {
+            transform: translateX(0.25rem);
+          }
+        }
+      }
+
     &[data-animation-variant="animate"]&&[data-in-view] {
       display: inline-block;
       animation-name: fadeIn;
@@ -150,19 +164,7 @@ const buttonDiv = parse(
     margin-top: auto;
     cursor: pointer;
 
-    @media screen and (hover: hover) and (pointer: fine) {
-      svg {
-        transition-property: transform;
-        transition-duration: 0.25s;
-      }
 
-      &:hover {
-        opacity: 0.9;
-        svg {
-          transform: translateX(0.25rem);
-        }
-      }
-    }
 
     @media screen and (min-width: ${theme.breakpoints.medium}) {
       padding-y: 1.5rem;

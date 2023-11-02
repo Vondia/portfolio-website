@@ -18,9 +18,9 @@ export const projectsInformation = [
     imageUrl: "/assets/projects/frankenergie.nl.png",
   },
   {
-    title: "Wereldwijde Weetjes",
-    subTitle: "A website build for primaryschool teachers",
-    projectUrl: "/wereldwijdeweetjes",
-    imageUrl: "/assets/projects/wereldwijdeweetjes.nl.png",
+    title: "Rai EP",
+    subTitle: "A portal for the Rai Amsterdam",
+    projectUrl: "/rai",
+    imageUrl: "/assets/projects/rai.webp",
   },
 ];

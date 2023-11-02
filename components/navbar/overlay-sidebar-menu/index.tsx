@@ -19,7 +19,7 @@ export const OverlaySidebarMenu: FC<OverlaySidebarMenuProps> = () => {
       router.asPath === "/gassan" ||
       router.asPath === "/frank-energie" ||
       router.asPath === "/viesus-cloud" ||
-      router.asPath === "/wereldwijdeweetjes"
+      router.asPath === "/rai"
     ) {
       setLinkColor("#A8AFBD");
     } else {
